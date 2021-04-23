@@ -1,0 +1,27 @@
+url: "https://club38.carrollonline.uk"
+baseurl: "/"
+title: "club38"
+description: Club38 Kite Patterns
+favicon: assets/images/favicon.png
+permalink: /:path/:basename:output_ext
+
+markdown: kramdown
+kramdown:
+  parse_block_html: true
+
+plugins:
+    - jekyll-bootstrap-sass
+    - jekyll-sitemap
+
+sass:
+    sass_dir: _sass
+    style: compressed
+
+exclude:
+    - README.md
+    - Gemfile
+    - Gemfile.lock
+    - changelog.md
+    - "*.Rmd"
+    - notes.txt
+    - bin/*
