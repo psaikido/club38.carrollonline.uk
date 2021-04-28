@@ -1,0 +1,81 @@
+description: main menu
+
+menu:
+
+    - title: home
+      url: /
+
+    - title: "Starting Levels 1-8"
+      sub: 
+        - title: L1
+          fnc: L1()
+
+        - title: L2
+          fnc: L2()
+
+        - title: L3
+          fnc: L3()
+
+        - title: L4
+          fnc: L4()
+
+        - title: L5
+          fnc: L5()
+
+        - title: L6
+          fnc: L6()
+
+        - title: L7
+          fnc: L7()
+
+        - title: L8
+          fnc: L8()
+
+    - title: "Master Levels 9-13"
+      sub: 
+        - title: M9
+          fnc: M9()
+
+        - title: M10
+          fnc: M10()
+
+        - title: M11
+          fnc: M11()
+
+        - title: M12
+          fnc: M12()
+
+        - title: M13
+          fnc: M13()
+
+    - title: "Combos 1-10"
+      sub: 
+         - title: "#1 shock-snap"
+           fnc: combos(1)
+
+         - title: "#2 shock-snap-tip"
+           fnc: combos(2)
+
+         - title: "#3 walk-it-off"
+           fnc: combos(3)
+
+         - title: "#4 launch-snaps"
+           fnc: combos(4)
+
+         - title: "#5 shock-clock-snap"
+           fnc: combos(5)
+
+         - title: "#6 go-snap-back-vslide"
+           fnc: combos(6)
+
+         - title: "#7 v-slide-v"
+           fnc: combos(7)
+
+         - title: "#8 don-fox-snap-box"
+           fnc: combos(8)
+
+         - title: "#9 snap-clock-snap"
+           fnc: combos(9)
+
+         - title: "#10 shock-circle-snap"
+           fnc: combos(10)
