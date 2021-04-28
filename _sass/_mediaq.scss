@@ -18,14 +18,11 @@
         max-width: 260px;
     }
 
-    .header {
-        display: none;
-    }
-
     .main-content {
         top: 0;
         left: 16px;
         min-width: 91%;
+        width: 100%;
 
         #wind-window {
             top: 10px;
