@@ -47,7 +47,7 @@ body {
 }
 
 .main-content {
-    margin: 63px auto 10px auto;
+    margin: 0 auto 10px auto;
     text-align: center;
     min-width: 90%;
     max-width: 98%;
@@ -117,10 +117,13 @@ ul {
     }
 }
 
-#wind-window {
+#wind-window, 
+#wind-window-with-menu {
     position: relative;
     height: 400px;
-    width: 800px;
+    max-width: 800px;
+    width: 90%;
+    top: 65px;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -129,22 +132,14 @@ ul {
     background-size: 800px 400px;
 }
 
-#msg {
-    position: relative;
-    height: 400px;
-    width: 800px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    font-size: .8em;
-    text-align: left;
-    padding-top: 20px;
+#wind-window-with-menu {
+    top: 0px;
 }
 
 #kite-wrap, #kite { 
     position: absolute;
     top: 365px;
-    left: 380px;
+    left: 48%;
     width: 45px; 
     height: 25px; 
     background-size: 45px 25px;
@@ -175,6 +170,19 @@ ul {
     height: 113px;
 }
 
+#msg {
+    position: relative;
+    top: 59px;
+    left: 0;
+    right: 0;
+    height: 400px;
+    width: 800px;
+    margin: 0 auto;
+    font-size: .8em;
+    text-align: left;
+    padding-top: 20px;
+}
+
 .wrap img {border: none;}
 
 .pathTestPoint {
@@ -185,10 +193,11 @@ ul {
 }
 
 .button-bank {
-    position: absolute;
-    top: 64px;
-    left: 105px;
+    position: fixed;
+    top: 14px;
+    left: 25px;
     width: 78px;
+    z-index: 4;
 
     input {
         float: left;
@@ -206,7 +215,8 @@ ul {
 }
 
 .individualPatternLinks {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     table-layout: fixed;
     border-collapse: separate;
     border-spacing: 10px;

@@ -1,11 +1,7 @@
 description: main menu
 
 menu:
-
-    - title: home
-      url: /
-
-    - title: "Starting Levels 1-8"
+    - title: "First Levels 1-8"
       sub: 
         - title: L1
           fnc: L1()
