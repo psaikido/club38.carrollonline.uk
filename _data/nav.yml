@@ -1,7 +1,7 @@
 description: main menu
 
 menu:
-    - title: "First Levels 1-8"
+    - title: "Levels 1-8"
       sub: 
         - title: L1
           fnc: L1()
@@ -27,7 +27,7 @@ menu:
         - title: L8
           fnc: L8()
 
-    - title: "Master Levels 9-13"
+    - title: "Levels 9-13"
       sub: 
         - title: M9
           fnc: M9()
