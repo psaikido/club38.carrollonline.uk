@@ -433,7 +433,7 @@ function M14() {
   s.ptn = [];
 
   let flight = [
-    //...walk,
+    ...walk,
     ...launchSnaps,
     ...snapBox,
     ...zigZagUp,
