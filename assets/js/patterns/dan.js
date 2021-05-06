@@ -311,7 +311,7 @@ function M14() {
     alignOrigin: [0.5, 0.35],
     start: 0,
     end: 1,
-    offsetX: 0,
+    offsetX: 3,
     offsetY: 27,
   }
 
@@ -328,8 +328,8 @@ function M14() {
   // #4 launch-snaps
   s.launch(low, .5);
   s.spin(3, .5, .5);
-  s.fly(lfIsh, low, 0, .5, .7);
-  s.spin(-7, .5, .8);
+  s.fly(lfIsh, low, 0, .5, 1);
+  s.spin(-7, .5, 1);
   let launchSnaps = s.ptn;
   s.ptn = [];
 
@@ -346,28 +346,27 @@ function M14() {
 
   // zig zag up
   s.spin('-=225_ccw', .5, 2);
-  s.fly(lfIsh + 100, lowIsh - 100, 0, .5, .7);
-  s.spin(3, .5, .5);
-  s.fly(lfIsh, hiIsh + 30, 0, .5, .7);
-  s.innerSpin(-3, .5, .5);
-  s.fly(centre, hi, 0, .5, .7);
-  s.spin('-=225_ccw', .5, .5);
-  s.spin(0, 1);
+  s.fly(lfIsh + 100, lowIsh - 100, 0, .5, .9);
+  s.spin(3, .5, .7);
+  s.fly(lfIsh, hiIsh + 30, 0, .5, .9);
+  s.innerSpin(-3, .5, .7);
+  s.fly(centre, hi, 0, .5, .9);
+  s.spin('-=225_ccw', .5, .7);
   let zigZagUp = s.ptn;
   s.ptn = [];
 
   // #10 shock-circle-snap 
   s.diveStop(low);
   s.path(slideCircle, 6, 4);
-  s.spin(-5, .1, .3);
+  s.spin(-5, .1, .7);
   let shockCircleSnap = s.ptn;
   s.ptn = [];
 
   // tip turns
   s.fly(centre, low - 45);
-  s.spin(2, 0, 1, '<');
-  s.fly(centre, low - 80);
   s.spin(-2, 0, 1, '<');
+  s.fly(centre, low - 80);
+  s.spin(2, 0, 1, '<');
   s.fly(centre, mid);
   s.spin(-2, 0, 1, '<');
   let tipTurns = s.ptn;
@@ -375,20 +374,20 @@ function M14() {
 
   // #9 snap-clock-snap
   s.fly(lfIsh, mid);
-  s.spin(6, .5, .7);
+  s.spin(6, .5, 1);
   s.fly(centre, mid);
-  s.innerSpin(-4, .5, .5);
+  s.innerSpin(-4, .5, .7);
   s.spin(1, .5, .3);
   s.spin(1, .5, .3);
   s.spin(1, .5, .3);
   s.spin(1, .5, .3);
-  s.spin(-4, .5, .5);
+  s.spin(-4, .5, .7);
   let snapClockSnap = s.ptn;
   s.ptn = [];
 
   // #6 go-snap-back-vslide
   s.fly(rtIsh, mid);
-  s.spin(4, 0, .5);
+  s.spin(4, 0, .7);
   s.fly(centre, mid);
   s.spin(-3, 0, .5);
   s.fly(rtIsh, mid, 0, 0, 1.5);
@@ -404,20 +403,23 @@ function M14() {
   s.ptn = [];
 
   // tumbleweed up
-  s.fly(centre, hi, -4, .5, 5);
+  s.fly(centre, hi, -4, .5, 6);
   let tumbleweedUp = s.ptn;
   s.ptn = [];
 
   // #1/#2 shock-snap-tip
   s.diveStop(low, .8);
-  s.spin(5, 0, .7);
+  s.spin(5, 0, .8);
   s.land();
+  s.fly(centre, low);
+  s.fly(centre + 40, low, -6, .5, 1.5)
+  s.land();
+  s.launch(low);
+  s.fly(centre, low, 3, .5, 1)
   let shockSnap = s.ptn;
   s.ptn = [];
 
   // #5 shock-clock-snap
-  s.launch(low);
-  s.spin(-3, .5, .5);
   s.fly(centre, hi, 0, .5, 2);
   s.spin(-2, .5, .5);
   s.diveStop(low, .8);
@@ -431,7 +433,7 @@ function M14() {
   s.ptn = [];
 
   let flight = [
-    ...walk,
+    //...walk,
     ...launchSnaps,
     ...snapBox,
     ...zigZagUp,
