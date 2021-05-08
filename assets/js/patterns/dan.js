@@ -340,7 +340,7 @@ function M14() {
   s.innerSpin(1, .9, .1, '<');
   s.fly(rtIsh, lowIsh);
   s.innerSpin(1, .9, .1, '<');
-  s.fly(lfIsh, lowIsh);
+  s.fly(lfIsh, lowIsh, 0, .5, 1.3);
   let snapBox = s.ptn;
   s.ptn = [];
 
@@ -365,7 +365,7 @@ function M14() {
   // tip turns
   s.fly(centre, low - 45);
   s.spin(-2, 0, 1, '<');
-  s.fly(centre, low - 80);
+  s.fly(centre, low - 100);
   s.spin(2, 0, 1, '<');
   s.fly(centre, mid);
   s.spin(-2, 0, 1, '<');
@@ -388,7 +388,7 @@ function M14() {
   // #6 go-snap-back-vslide
   s.fly(rtIsh, mid);
   s.spin(4, 0, .7);
-  s.fly(centre, mid);
+  s.fly(centre, mid, 0, .5, 1.2);
   s.spin(-3, 0, .5);
   s.fly(rtIsh, mid, 0, 0, 1.5);
   let goSnapBackV = s.ptn;
@@ -408,14 +408,14 @@ function M14() {
   s.ptn = [];
 
   // #1/#2 shock-snap-tip
-  s.diveStop(low, .8);
-  s.spin(5, 0, .8);
+  s.diveStop(low, 1);
+  s.spin(5, .2, .8);
   s.land();
-  s.fly(centre, low);
-  s.fly(centre + 40, low, -6, .5, 1.5)
-  s.land();
-  s.launch(low);
-  s.fly(centre, low, 3, .5, 1)
+  s.fly(centre, low, 0, .7);
+  s.fly(centre + 60, low, -6, .5, 1.5)
+  s.land(1, .5);
+  s.fly(centre + 60, low, 0, 1, 1);
+  s.fly(centre, low, 3, .5, .8);
   let shockSnap = s.ptn;
   s.ptn = [];
 
@@ -423,13 +423,17 @@ function M14() {
   s.fly(centre, hi, 0, .5, 2);
   s.spin(-2, .5, .5);
   s.diveStop(low, .8);
-  s.spin(-1, .5, .3);
-  s.spin(-1, .5, .3);
-  s.spin(-1, .5, .3);
-  s.spin(-1, .5, .3);
-  s.spin(4, .5, .5);
+  s.spin('-=45_ccw', .5, .3);
+  s.spin('-=45_ccw', .5, .3);
+  s.spin('-=45_ccw', .5, .3);
+  s.spin('-=45_ccw', .5, .3);
+  s.spin('-=45_ccw', .5, .3);
+  s.spin('-=45_ccw', .5, .3);
+  s.spin('-=45_ccw', .5, .3);
+  s.spin('-=45_ccw', .5, .3);
+  s.spin(6, .5, 1);
   s.land();
-  let diveStopLand = s.ptn;
+  let shockClockSnap = s.ptn;
   s.ptn = [];
 
   let flight = [
@@ -444,7 +448,7 @@ function M14() {
     ...vSlideV,
     ...tumbleweedUp,
     ...shockSnap,
-    ...diveStopLand,
+    ...shockClockSnap,
   ];
   s.ptn = flight;
 
