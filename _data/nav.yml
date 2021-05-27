@@ -27,7 +27,7 @@ menu:
         - title: L8
           fnc: L8()
 
-    - title: "Levels 9-13"
+    - title: "Master Levels"
       sub: 
         - title: M9
           fnc: M9()
@@ -43,6 +43,12 @@ menu:
 
         - title: M13
           fnc: M13()
+
+        - title: M14
+          fnc: M14()
+
+        - title: M94
+          fnc: M94()
 
     - title: "Combos 1-10"
       sub: 
