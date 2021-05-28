@@ -65,7 +65,7 @@ class Stepper {
     // Recalculate initial settings for responsiveness.
     let skyWidth = this.obj.offsetParent.offsetWidth;
     xMid = skyWidth / 2;
-    lf = xMid - skyWidth + 10;
+    lf = xMid - skyWidth + 40;
     rt = xMid - 50;
   }
 
