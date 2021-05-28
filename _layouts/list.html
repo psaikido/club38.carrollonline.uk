@@ -12,28 +12,16 @@
 
             <div class="main-content">
                 {% for l in site.data.skills.levels %}
-                    {% assign levelIndex = forloop.index %}
-
                     <h4>Level {{ l.level }} - '{{ l.pwd }}'</h4>
 
                     {% for s in l.skills %}
-                        {% assign skillIndex = forloop.index %}
-
                         <div class="two-cols">
                             <div class="col-left">
                                 {{ s.title }}. {{ s.desc }}
                             </div>
 
-                            <div class="col-right" id="vid-{{ levelIndex }}{{ skillIndex }}">
-                                <script>
-                                    var col = document.getElementById('vid-{{ levelIndex }}{{ skillIndex }}');
-
-                                    if (readCookie('cookie-notice-dismissed') == 'accepted') {
-                                        col.innerHTML = '<iframe width="100%" height="" src="https://www.youtube.com/embed/{{ s.youtube-link }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe>';
-                                    } else {
-                                        col.innerHTML = '<a href="https://youtu.be/{{ s.youtube-link }}">youtube</a>';
-                                    }
-                                </script>
+                            <div class="col-right">
+                                <a href="https://youtu.be/{{ s.youtube-link }}">youtube</a>
                             </div>
                         </div>
                     {% endfor %}
