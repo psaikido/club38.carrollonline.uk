@@ -1,7 +1,7 @@
 ---
 layout: default-menu
 title: club38 
-permalink: /pattern-index.html/
+permalink: /pattern-index.html
 ---
 
 <table class="individualPatternLinks">
