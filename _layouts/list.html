@@ -11,21 +11,33 @@
             </div>
 
             <div class="main-content">
-                {% include nav.html %}
+                {% for l in site.data.skills.levels %}
+                    {% assign levelIndex = forloop.index %}
 
-                <div class="general-text">
-                    {% for s in site.data.skills.skills %}
-                    <h4>Level {{ s.level }} - '{{ s.pwd }}'</h4>
+                    <h4>Level {{ l.level }} - '{{ l.pwd }}'</h4>
 
-                        {% for item in s.skills %}
-                            {{ item.title }}. 
-                            {{ item.desc }} - <a href="https://youtu.be/{{ item.youtube }}">youtube</a>
-                            <br />
-                        {% endfor %}
+                    {% for s in l.skills %}
+                        {% assign skillIndex = forloop.index %}
 
-                        <br />
+                        <div class="two-cols">
+                            <div class="col-left">
+                                {{ s.title }}. {{ s.desc }}
+                            </div>
+
+                            <div class="col-right" id="vid-{{ levelIndex }}{{ skillIndex }}">
+                                <script>
+                                    var col = document.getElementById('vid-{{ levelIndex }}{{ skillIndex }}');
+
+                                    if (readCookie('cookie-notice-dismissed') == 'accepted') {
+                                        col.innerHTML = '<iframe width="100%" height="" src="https://www.youtube.com/embed/{{ s.youtube-link }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe>';
+                                    } else {
+                                        col.innerHTML = '<a href="https://youtu.be/{{ s.youtube-link }}">youtube</a>';
+                                    }
+                                </script>
+                            </div>
+                        </div>
                     {% endfor %}
-                </div>
+                {% endfor %}
             </div>
         </div>
 

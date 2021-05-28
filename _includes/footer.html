@@ -1,6 +1,17 @@
 <div class="footer">
+    <span id="cookie-info">
+        <a href="#">Cookie info</a>
+    </span>
+
     <span class="footer-text">
-        &copy; 2021 - hughie (at) carrollonline.co.uk
+        All materials owned by <a href="https://revkites.com">revkites.com</a> - this site &copy; 2021 by <a href="https://hugle.co.uk">hughie</a>
     </span>
 </div>
 
+<div id="cookie-notice">
+    <a id="cookie-notice-accept" class="btn btn-primary btn-sm">Allow cookies?</a>
+    <a id="cookie-notice-decline" class="btn btn-primary btn-sm">Decline</a>
+    <a href="/cookies.html" class="btn btn-primary btn-sm">More info</a>
+</div>
+
+{% include cookie-consent.html %}

@@ -1,6 +1,6 @@
 description: thirty eight skills 
 
-skills:
+levels:
     - level: 1
       pwd: thebasics
       skills:
@@ -32,24 +32,25 @@ skills:
       pwd: divestop
       skills:
         - title: "7"
+          desc: hover leading edge up
+          youtube-link: dgfWBFuwhgs
+
+        - title: "8"
           desc: side hover
           youtube-link: MzRjETMhxF8
 
-        - title: "8"
-          desc: hover leading edge up
-          youtube-link: dgfWBFuwhgs
 
         - title: "9"
-          desc: 360 from leading edge up
+          desc: full spin
           youtube-link: K480FZgDoAQ
 
         - title: "10"
-          desc: hover leading edge up
-          youtube-link: dgfWBFuwhgs
+          desc: 180 turn up
+          youtube-link: NAGfZWqDrBU
 
         - title: "11"
-          desc: 180 up turn
-          youtube-link: NAGfZWqDrBU
+          desc: divestop
+          youtube-link: 677jDM6ulj4
 
     - level: 3
       pwd: windfriend
