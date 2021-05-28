@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include head.html %}
+    <body>
+        <div class="wrap">
+
+            <div class="header">
+                <div class="header-text">
+                    {{ page.title }}
+                </div>
+            </div>
+
+            <div class="main-content">
+                {% include nav.html %}
+
+                <div class="general-text">
+                    {% for s in site.data.skills.skills %}
+                    <h4>Level {{ s.level }} - '{{ s.pwd }}'</h4>
+
+                        {% for item in s.skills %}
+                            {{ item.title }}. 
+                            {{ item.desc }} - <a href="https://youtu.be/{{ item.youtube }}">youtube</a>
+                            <br />
+                        {% endfor %}
+
+                        <br />
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        {% include footer.html %}
+    </body>
+</html>
+
