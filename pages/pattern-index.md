@@ -43,7 +43,6 @@ permalink: /pattern-index.html
             C-5 and 6 <a href="/ecd7o.html">ecd7o</a><br />
             C-7 and 8 <a href="/adofn.html">adofn</a><br />
             C-9 and 10 <a href="/h80xx.html">h80xx</a><br />
-            38 Skills <a href="/7j38x.html">7j38x</a><br />
 
             <!--
             dev <a href="/7sw2d.html">7sw2d</a><br />
