@@ -42,6 +42,35 @@ function L2() {
   s.doTimeline();
 }
 
+function L2a() {
+  reset();
+
+  let s = new Stepper()
+    .setStart(k, kImg)
+    .launch(mid, 1.5)
+    .spin(-1)
+    .fly(lf, mid, 0, .5, 2)
+    .spin(2)
+    .fly(rt, mid, 0, .5, 3.5)
+    .spin(-2)
+    .fly(centre, mid, 0, .5, 2)
+    .spin(4)
+    .fly(lf, mid, 0, .5, 2)
+    .spin(2)
+    .fly(centre, mid, 0, .5, 2)
+    .spin(-4)
+    .fly(rt, mid, 0, .5, 2)
+    .spin(-2)
+    .fly(centre, mid, 0, .5, 2)
+    .spin(1)
+    .fly(centre, hi)
+    .spin(+2)
+    .diveStop(low)
+    .spin(-2, 1)
+    .land(1)
+
+  s.doTimeline();
+}
 function L3() {
   reset();
 

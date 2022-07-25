@@ -21,6 +21,7 @@ permalink: /pattern-index.html
         <td class="col1">
             L-1 <a href="/xjanm.html">xjanm</a><br />
             L-2 <a href="/0tr3x.html">0tr3x</a><br />
+            L-2-a <a href="/0tr3x-a.html">0tr3x-a</a><br />
             L-3 <a href="/6q9ij.html">6q9ij</a><br />
             L-4 <a href="/3s8fm.html">3s8fm</a><br />
             L-5 <a href="/uqyqe.html">uqyqe</a><br />
