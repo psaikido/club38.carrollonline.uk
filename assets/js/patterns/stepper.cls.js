@@ -13,22 +13,6 @@
  * Gsap movements are measured from an object's starting position.
  * For left/right values we decrease/increase from the 'centre' of 380px.
  */
-let centre = 0;
-let lf = -335;
-let lfIsh = -135;
-let xMid = 380;
-let rtIsh = 135;
-let rt = 315;
-
-// y values are 0 at the top and 400 at the bottom.
-// The displacement values are negative because the kite's 
-// starting position is 365px.
-let ground = -5;
-let low = -45;
-let lowIsh = -100;
-let mid = -200;
-let hiIsh = -280; 
-let hi = -335;
 
 class Stepper {
     constructor() {
@@ -65,7 +49,7 @@ class Stepper {
         this.y = y;
         this.duration = duration;
         this.rotation = rot;
-        this.delay = 0;
+        this.delay = 1;
 
         this._addStep();
         return this;
@@ -105,7 +89,7 @@ class Stepper {
     }
 
     land(duration = 1, delay = .5) {
-        this.fly(this.x, ground, 0, delay, duration);
+        this.fly(this.x, this.ground, 0, delay, duration);
         return this;
     }
 
@@ -118,11 +102,12 @@ class Stepper {
         return this;
     }
 
-    path(mp, dur, rotationCount = 0) {
+    path(mp, dur, rotationCount = 0, ease = 'sine.inOut') {
         this.x = undefined;
         this.y = undefined;
         this.motionPath = mp;
         this.duration = dur;
+        this.ease = ease;
         this._convertRotCode(rotationCount);
 
         this._addStep();
@@ -196,7 +181,6 @@ class Stepper {
         this.mid = -(this.rowHeight * 3);
         this.hiIsh = -(this.rowHeight * 4); 
         this.hi = -(this.rowHeight * 5);
-        console.log(this);
     }
 
     _makeTweenObj(step) {
