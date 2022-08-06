@@ -55,14 +55,14 @@ function L3() {
     s.setStart(k, kImg, 2)
     s.launch(s.low)
     s.spin(-2)
-    s.fly(centre, s.mid)
+    s.fly(s.centre, s.mid)
     s.fly(s.lf1, s.mid, 0, .5, 1.5)
     s.spin(-8, .5, 1.5)
     s.fly(s.rt1, s.mid, 0, .5, 2.5)
     s.spin(8, .5, 1.5)
-    s.fly(centre, s.mid, 0, .5, 1.5)
+    s.fly(s.centre, s.mid, 0, .5, 1.5)
     s.spin(1, .5)
-    s.fly(centre, s.lowIsh, 0, .5, 1.5)
+    s.fly(s.centre, s.lowIsh, 0, .5, 1.5)
     s.spin(-2)
     s.land(2)
 
@@ -112,12 +112,12 @@ function L4() {
     s.fly(s.rt1, s.mid)
     s.innerSpin(4, .5, .8)
     s.innerSpin(-4, .5, .8)
-    s.fly(centre, s.mid)
-    s.fly(centre, s.ground - 10, 0, .5, 2)
-    s.fly(centre, s.mid, 0, .5, 2)
-    s.fly(centre - 30, s.mid, -2, 0)
-    s.fly(centre - 30, s.ground - 10, 0, 0, 2)
-    s.fly(centre - 30, s.mid, 0, .5, 2)
+    s.fly(s.centre, s.mid)
+    s.fly(s.centre, s.ground - 10, 0, .5, 2)
+    s.fly(s.centre, s.mid, 0, .5, 2)
+    s.fly(s.centre - 30, s.mid, -2, 0)
+    s.fly(s.centre - 30, s.ground - 10, 0, 0, 2)
+    s.fly(s.centre - 30, s.mid, 0, .5, 2)
     s.fly(s.lf2, s.mid, 0, .5, 1.5)
     s.path(mp2, 8)
     s.innerSpin(-1, 0, 1, '<+1')
@@ -133,18 +133,21 @@ function L4() {
 function L5() {
     reset();
 
+    let s = new Stepper()
+    s.setStart(k, kImg, -2)
+
     let figure8 = {
         path: [
-            {x: s.rt1, y: s.lowIsh},
-            {x: s.lf1, y: s.hi},
-            {x: s.lf3, y: s.mid},
-            {x: s.lf1, y: s.low},
-            {x: s.rt1, y: s.hi},
-            {x: s.rt3, y: s.mid},
             {x: s.rt1, y: s.low},
-            {x: s.lf1, y: s.hi},
-            {x: s.lf3, y: s.mid},
-            {x: s.lf1, y: s.low},
+            {x: s.lf1, y: s.hiIsh},
+            {x: s.lf2, y: s.mid},
+            {x: s.lf1, y: s.lowIsh},
+            {x: s.rt1, y: s.hiIsh},
+            {x: s.rt2, y: s.mid},
+            {x: s.rt1, y: s.lowIsh},
+            {x: s.lf1, y: s.hiIsh},
+            {x: s.lf2, y: s.mid},
+            {x: s.lf1, y: s.lowIsh},
             {x: s.rt1, y: s.hiIsh},
         ],
         start: 0,
@@ -155,7 +158,7 @@ function L5() {
 
     let spiralIn = {
         path: '#spiralIn',
-        align: '#spiralIn',
+        align: k,
         autoRotate: 90,
         alignOrigin: [0.5, 0.35],
         start: 0,
@@ -169,25 +172,22 @@ function L5() {
         alignOrigin: [0.5, 0.35],
         start: 0.995,
         end: 0,
-        offsetX: 10,
     }
 
-    let s = new Stepper()
-    s.setStart(k, kImg, -2)
     s.launch(s.low)
     s.spin(1, .3, .3)
-    s.fly(s.lf3 + 40, s.low, 0, .5, 2)
+    s.fly(s.lf3, s.low, 0, .5, 2)
     s.spin(-2, .3, 1.5)
     s.fly(s.rt3, s.low, 0, .5, 3)
     s.spin('+=155_cw', .3, 1.5)
-    s.path(figure8, 11)
+    s.path(figure8, 10, 0, 'power0.inOut')
     s.fly(s.rt1, s.hiIsh, '90_shortest', .5, .5)
     s.fly(s.rt1, s.lowIsh, 0, .5, 2)
     s.fly(s.lf1, s.lowIsh, 0, .5, 2)
     s.fly(s.lf1, s.hiIsh, 0, .5, 2)
     s.fly(s.rt1, s.hiIsh, 0, .5, 2)
     s.spin('+=60_cw', .5, 1)
-    s.path(spiralIn, 6)
+    s.path(spiralIn, 6, 0, 'sine.in')
     s.spin('-92_ccw', .5, 1)
     s.path(spiralOut, 6)
     s.spin('-=90_ccw')
@@ -257,20 +257,19 @@ function L6() {
     }
 
     let s = new Stepper()
-    s.setStart(k, kImg)
     s.setStart(k, kImg, -2)
-    s.launch(s.lowIsh)
+    s.launch(s.low)
     s.spin(3, .5, .7)
     s.spin(1, .5, .3)
     s.spin(1, .5, .3)
     s.spin(-6, .5, 1)
-    s.fly(s.rt3, s.lowIsh, 0, .5, 1.5)
+    s.fly(s.rt3, s.low, 0, .5, 1.5)
     s.spin(2, 0, 2)
-    s.fly(s.lf3, s.lowIsh, 0, 0, 3)
+    s.fly(s.lf3, s.low, 0, 0, 3)
     s.spin(-2, 0, 2)
-    s.fly(centre, s.lowIsh, 0, 0, 1.5)
-    s.fly(centre, s.low, 1, 0, .7)
-    s.fly(centre, s.mid, 0, .5, 1.5)
+    s.fly(s.centre, s.low, 0, 0, 1.5)
+    s.fly(s.centre, s.low + 30, 1, 0, .7)
+    s.fly(s.centre, s.mid, 0, .5, 1.5)
     s.spin(-5, .5, 1)
     s.fly(s.rt1, s.mid)
     s.spin('+=45_cw', .5, .3)
@@ -329,7 +328,7 @@ function L7() {
     s.innerSpin(3, .5, 2.5)
     s.fly(s.rt1, s.low)
     s.innerSpin('-=360_ccw', .5, 2.5)
-    s.fly(centre, s.low, 0, .5, 1.5)
+    s.fly(s.centre, s.low, 0, .5, 1.5)
     s.innerSpin('-=450_ccw', .5, .8)
     s.land()
 
@@ -373,9 +372,9 @@ function L8() {
     s.launch(s.hiIsh, 2)
     // North
     s.fly(-aBit, s.hiIsh)
-    s.fly(centre, s.hiIsh)
-    s.fly(centre, s.hi)
-    s.fly(centre, s.hiIsh)
+    s.fly(s.centre, s.hiIsh)
+    s.fly(s.centre, s.hi)
+    s.fly(s.centre, s.hiIsh)
     s.spin('-=45_ccw', .5, .3)
     s.spin('+=90_cw', .5, .3)
     s.spin('-=45_ccw', .5, .3)
@@ -383,9 +382,9 @@ function L8() {
     // South
     s.diveStop(s.low)
     s.fly(-aBit, s.low)
-    s.fly(centre, s.low)
-    s.fly(centre, s.lowIsh)
-    s.fly(centre, s.low)
+    s.fly(s.centre, s.low)
+    s.fly(s.centre, s.lowIsh)
+    s.fly(s.centre, s.low)
     s.spin('-=45_ccw', .5, .3)
     s.spin('+=90_cw', .5, .3)
     s.spin('-=45_ccw', .5, .3)
@@ -447,7 +446,7 @@ function L8() {
     s.spin('+=90_cw', .5, .3)
     s.spin('-=45_ccw', .5, .3)
     // Finish
-    s.fly(centre, s.hi, '+=225_cw', .5, 2)
+    s.fly(s.centre, s.hi, '+=225_cw', .5, 2)
     s.spin(-2, .5)
     s.diveStop(s.mid, 1)
     s.spin(4, .5)
