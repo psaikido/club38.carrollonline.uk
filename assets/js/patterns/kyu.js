@@ -1,6 +1,5 @@
 function L1() {
     let s = new Stepper();
-    s.setStart(k, kImg);
 
     s.launch(s.mid);
     s.spin(-1)
@@ -17,7 +16,6 @@ function L1() {
 
 function L2() {
     let s = new Stepper();
-    s.setStart(k, kImg);
 
     s.launch(s.mid)
     s.spin(-1)
@@ -45,8 +43,8 @@ function L2() {
 }
 
 function L3() {
-    let s = new Stepper()
-    s.setStart(k, kImg, 2)
+    let s = new Stepper(2)
+    
     s.launch(s.low)
     s.spin(-2)
     s.fly(s.centre, s.mid)
@@ -64,8 +62,7 @@ function L3() {
 }
 
 function L4() {
-    let s = new Stepper()
-    s.setStart(k, kImg, -2)
+    let s = new Stepper(2)
 
     let mp1 = { 
         path: [
@@ -123,8 +120,7 @@ function L4() {
 }
 
 function L5() {
-    let s = new Stepper()
-    s.setStart(k, kImg, 2)
+    let s = new Stepper(2)
 
     let figure8 = {
         path: [
@@ -189,8 +185,7 @@ function L5() {
 }
 
 function L6() {
-    let s = new Stepper()
-    s.setStart(k, kImg, 2)
+    let s = new Stepper(2)
 
     let ironCrossNW = {
         path: '#ironCrossNW',
@@ -247,8 +242,6 @@ function L6() {
         offsetY: 2,
     }
 
-    let s = new Stepper()
-    s.setStart(k, kImg, -2)
     s.launch(s.low)
     s.spin(3, .5, .7)
     s.spin(1, .5, .3)
@@ -283,7 +276,6 @@ function L6() {
 
 function L7() {
     let s = new Stepper()
-    s.setStart(k, kImg)
 
     let mp1 = {
         path: [
@@ -328,6 +320,8 @@ function L7() {
 function L8() {
     const aBit = 60;
 
+    let s = new Stepper()
+
     let invSlide1 = {
         path: [
             {x: s.rt1 - 40 , y: s.lowIsh},
@@ -355,8 +349,6 @@ function L8() {
         align: 'self',
     }
 
-    let s = new Stepper()
-    s.setStart(k, kImg)
     s.launch(s.hiIsh)
     // North
     s.fly(-aBit, s.hiIsh)

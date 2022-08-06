@@ -15,7 +15,7 @@
  */
 
 class Stepper {
-    constructor() {
+    constructor(rotation) {
         this.obj;
         this.objInner;
         this.objCurrent;
@@ -31,11 +31,13 @@ class Stepper {
 
         this.rotationCount = 0;
         this.ptn = [];
+
+        this._setStart(rotation);
     }
 
-    setStart(o, oInner, rotation = 0) {
-        this.obj = this.objCurrent = o;
-        this.objInner = oInner;
+    _setStart(rotation = 0) {
+        this.obj = this.objCurrent = k;
+        this.objInner = kImg;
         this.rotation = rotation;
         this.delay = 0;
         this.duration = .1;
