@@ -136,10 +136,11 @@ function L5() {
             {x: s.lf1, y: s.lowIsh},
             {x: s.rt1, y: s.hiIsh},
         ],
+        align: k,
+        autoRotate: 90,
         start: 0,
         end: 1,
         curviness: .9,
-        autoRotate: 90,
     }
 
     let spiralIn = {
@@ -173,9 +174,9 @@ function L5() {
     s.fly(s.lf1, s.hiIsh, 0, .5, 2)
     s.fly(s.rt1, s.hiIsh, 0, .5, 2)
     s.spin('+=60_cw', .5, 1)
-    s.path(spiralIn, 6, 0, 'sine.in')
+    s.path(spiralIn, 7, 0, 'sine.in')
     s.spin('-92_ccw', .5, 1)
-    s.path(spiralOut, 6)
+    s.path(spiralOut, 7)
     s.spin('-=90_ccw')
     s.diveStop(s.low)
     s.spin(2, .5)
