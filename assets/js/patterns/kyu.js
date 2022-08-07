@@ -300,9 +300,9 @@ function L7() {
         autoRotation: -90,
     }
 
-    s.launch(s.hi)
+    s.launch(s.hi, 1.5)
     s.spin(2, .5)
-    s.diveStop(s.low, 3)
+    s.diveStop(s.low, 1.8, 1.5)
     s.spin(4, .5, 3)
     s.spin('-=45_ccw', .5, .3)
     s.spin('-=45_ccw', .5, .3)

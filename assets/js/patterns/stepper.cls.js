@@ -83,9 +83,10 @@ class Stepper {
         return this;
     }
 
-    diveStop(y, duration = 1) {
+    diveStop(y, duration = 1, delay = .5) {
         this.y = y;
         this.duration = duration;
+        this.delay = delay;
         this.ease = 'power1.in';
 
         this._addStep();
