@@ -188,59 +188,60 @@ function L5() {
 function L6() {
     let s = new Stepper(2)
 
+    let svg = document.getElementById('club38-svg');
+    let c3Text = '<circle id="circle3" cx="320" cy="210" r="80" fill="none" />';
+    let c3 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    c3.setAttribute('id', 'circle3');
+    c3.setAttribute('cx', '320');
+    c3.setAttribute('cy', '210');
+    c3.setAttribute('r', '100');
+    c3.setAttribute('fill', 'black');
+    svg.appendChild(c3);
+
+    MotionPathPlugin.convertToPath('#circle3');
+
     let ironCrossNW = {
-        path: '#ironCrossNW',
-        align: '#ironCrossNW',
+        path: '#circle3',
+        align: k,
         autoRotate: -90,
-        alignOrigin: [0.5, 0.35],
-        start: 0,
-        end: 1,
-        offsetX: -2,
-        offsetY: 2,
+        alignOrigin: [.5, .5],
+        start: .25,
+        end: 0,
+        offsetX: 100,
+        offsetY: -100,
     }
 
     let ironCrossNE = {
-        path: '#ironCrossNE',
-        align: '#ironCrossNE',
+        path: '#circle3',
+        align: k,
         autoRotate: 90,
-        alignOrigin: [0.5, 0.35],
-        start: 1,
-        end: 0,
-        offsetX: -2,
-        offsetY: -6,
+        alignOrigin: [.5, .5],
+        start: .5,
+        end: .25,
+        offsetX: 200,
+        offsetY: 0,
     }
 
     let ironCrossSE = {
-        path: '#ironCrossSE',
-        align: '#ironCrossSE',
+        path: '#circle3',
+        align: k,
         autoRotate: -90,
-        alignOrigin: [0.5, 0.35],
-        start: 0,
-        end: 1,
-        offsetX: -2,
-        offsetY: -6,
+        alignOrigin: [.5, .5],
+        start: .75,
+        end: .5,
+        offsetX: 100,
+        offsetY: 100,
     }
 
     let ironCrossSW = {
-        path: '#ironCrossSW',
-        align: '#ironCrossSW',
+        path: '#circle3',
+        align: k,
         autoRotate: 90,
-        alignOrigin: [0.5, 0.35],
+        alignOrigin: [.5, .5],
         start: 1,
-        end: 0,
-        offsetX: -2,
-        offsetY: -6,
-    }
-
-    let preDive = {
-        path: '#preDive',
-        align: '#preDive',
-        autoRotate: 90,
-        alignOrigin: [0.5, 0.35],
-        start: .27,
-        end: 1,
-        offsetX: -2,
-        offsetY: 2,
+        end: .75,
+        offsetX: 0,
+        offsetY: 0,
     }
 
     s.launch(s.low)
@@ -267,7 +268,8 @@ function L6() {
     s.path(ironCrossSE, 2)
     s.path(ironCrossSW, 2)
     s.spin(1, .5)
-    s.path(preDive, 3)
+    s.fly(s.lf1, s.hi, 0);
+    s.fly(s.centre, s.hi, 2, 0);
     s.diveStop(s.low, .7)
     s.spin(4, .5, .5)
     s.land()
