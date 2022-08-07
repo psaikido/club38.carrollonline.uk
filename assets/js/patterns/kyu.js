@@ -1,5 +1,6 @@
 function L1() {
-    let s = new Stepper();
+    reset()
+    let s = new Stepper()
 
     s.launch(s.mid);
     s.spin(-1)
@@ -15,7 +16,8 @@ function L1() {
 }
 
 function L2() {
-    let s = new Stepper();
+    reset()
+    let s = new Stepper()
 
     s.launch(s.mid)
     s.spin(-1)
@@ -43,6 +45,7 @@ function L2() {
 }
 
 function L3() {
+    reset()
     let s = new Stepper(2)
     
     s.launch(s.low)
@@ -62,6 +65,7 @@ function L3() {
 }
 
 function L4() {
+    reset()
     let s = new Stepper(2)
 
     let mp1 = { 
@@ -120,6 +124,7 @@ function L4() {
 }
 
 function L5() {
+    reset()
     let s = new Stepper(2)
 
     let figure8 = {
@@ -186,6 +191,7 @@ function L5() {
 }
 
 function L6() {
+    reset()
     let s = new Stepper(2)
 
     let svg = document.getElementById('club38-svg');
@@ -278,6 +284,7 @@ function L6() {
 }
 
 function L7() {
+    reset()
     let s = new Stepper()
 
     let mp1 = {
@@ -323,6 +330,7 @@ function L7() {
 function L8() {
     const aBit = 60;
 
+    reset()
     let s = new Stepper()
 
     let invSlide1 = {

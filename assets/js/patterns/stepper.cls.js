@@ -19,16 +19,15 @@ class Stepper {
         this.obj;
         this.objInner;
         this.objCurrent;
-
         this.x;
+        this.y;
         this.rotation;
         this.delay;
         this.duration;
         this.motionPath;
         this.ease;
         this.label;
-        this.transformOrigin = '50% 35%';
-
+        this.transformOrigin = '47% 35%';
         this.rotationCount = 0;
         this.ptn = [];
 
@@ -103,21 +102,6 @@ class Stepper {
 
         this._addStep();
         return this;
-    }
-
-    testPath(path) {
-        for (var i = 0; i < path.length; i++) {
-            var x = xMid + path[i].x;
-            var y = 400 - Math.abs(path[i].y);
-
-            var dv = $('<div class="pathTestPoint"/>')
-                .css({
-                    left: x,
-                    top: y
-                })
-                .attr('title', i)
-                .appendTo('#wind-window');
-        }
     }
 
     doTimeline() {
