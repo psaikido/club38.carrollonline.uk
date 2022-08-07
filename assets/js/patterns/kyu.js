@@ -333,34 +333,37 @@ function L8() {
     reset()
     let s = new Stepper()
 
+    let svg = document.getElementById('club38-svg');
+    let c3Text = '<circle id="circle3" />';
+    let c3 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    c3.setAttribute('id', 'circle3');
+    c3.setAttribute('cx', '400');
+    c3.setAttribute('cy', '200');
+    c3.setAttribute('r', s.colWidth);
+    c3.setAttribute('fill', 'black');
+    svg.appendChild(c3);
+
+    MotionPathPlugin.convertToPath('#circle3');
     let invSlide1 = {
-        path: [
-            {x: s.rt1 - 40 , y: s.lowIsh},
-            {x: 0, y: s.low},
-            {x: s.lf1 + 40 , y: s.lowIsh},
-            {x: s.lf1, y: s.mid},
-        ],
+        path: '#circle3',
+        align: k,
         start: 0,
-        end: 1,
+        end: .5,
         curviness: .4,
-        align: 'self',
     }
 
     let invSlide2 = {
-        path: [
-            {x: s.lf1, y: s.mid},
-            {x: s.lf1 + 40 , y: s.lowIsh},
-            {x: 0, y: s.low},
-            {x: s.rt1 - 40 , y: s.lowIsh},
-            {x: s.rt1, y: s.lowIsh},
-        ],
-        start: 0,
-        end: 1,
+        path: '#circle3',
+        align: k,
+        start: .66,
+        end: .05,
         curviness: .4,
-        align: 'self',
+        offsetX: 189,
+        offsetY: 104,
     }
 
     s.launch(s.hiIsh)
+
     // North
     s.fly(-aBit, s.hiIsh)
     s.fly(s.centre, s.hiIsh)
@@ -370,6 +373,7 @@ function L8() {
     s.spin('+=90_cw', .5, .3)
     s.spin('-=45_ccw', .5, .3)
     s.spin(2, .5)
+
     // South
     s.diveStop(s.low)
     s.fly(-aBit, s.low)
@@ -379,8 +383,10 @@ function L8() {
     s.spin('-=45_ccw', .5, .3)
     s.spin('+=90_cw', .5, .3)
     s.spin('-=45_ccw', .5, .3)
+
     // East
-    s.fly(s.rt1, s.mid, 3, .5, 1.8)
+    s.spin(2, .5)
+    s.fly(s.rt1, s.mid, 1, 0, 1.8)
     s.fly(s.rt1, s.hiIsh)
     s.fly(s.rt1, s.mid)
     s.fly(s.rt1 + aBit, s.mid)
@@ -388,6 +394,7 @@ function L8() {
     s.spin('-=45_ccw', .5, .3)
     s.spin('+=90_cw', .5, .3)
     s.spin('-=45_ccw', .5, .3)
+    
     // West
     s.path(invSlide1, 3)
     s.innerSpin(2, 0, 3, '<')
@@ -398,8 +405,10 @@ function L8() {
     s.spin('-=45_ccw', .5, .3)
     s.spin('+=90_cw', .5, .3)
     s.spin('-=45_ccw', .5, .3)
+    
     // North East
-    s.fly(s.rt1, s.hiIsh, '+=135', .5, 1.5)
+    s.spin(1, .5)
+    s.fly(s.rt1, s.hiIsh, '+=45', 0, 1.5)
     s.fly(s.rt1 - aBit, s.hi)
     s.fly(s.rt1, s.hiIsh)
     s.fly(s.rt1 + aBit, s.hiIsh - aBit)
@@ -407,8 +416,10 @@ function L8() {
     s.spin('-=45_ccw', .5, .3)
     s.spin('+=90_cw', .5, .3)
     s.spin('-=45_ccw', .5, .3)
+
     // South West
-    s.fly(s.lf1, s.lowIsh, -2, .5, 1.5)
+    s.spin(-2, .5)
+    s.fly(s.lf1, s.lowIsh, 0, 0, 1.5)
     s.fly(s.lf1 - aBit, s.lowIsh - aBit)
     s.fly(s.lf1, s.lowIsh)
     s.fly(s.lf1 - aBit, s.lowIsh + aBit)
@@ -416,6 +427,7 @@ function L8() {
     s.spin('-=45_ccw', .5, .3)
     s.spin('+=90_cw', .5, .3)
     s.spin('-=45_ccw', .5, .3)
+
     // North West
     s.fly(s.lf1 - 30, s.lowIsh - 35, 2)
     s.fly(s.lf1, s.hiIsh, -1)
@@ -426,6 +438,7 @@ function L8() {
     s.spin('-=45_ccw', .5, .3)
     s.spin('+=90_cw', .5, .3)
     s.spin('-=45_ccw', .5, .3)
+
     // South East
     s.path(invSlide2, 3)
     s.innerSpin(-2, 0, 3, '<')
@@ -436,8 +449,10 @@ function L8() {
     s.spin('-=45_ccw', .5, .3)
     s.spin('+=90_cw', .5, .3)
     s.spin('-=45_ccw', .5, .3)
+
     // Finish
-    s.fly(s.centre, s.hi, '+=225_cw', .5, 2)
+    s.spin(2, .5)
+    s.fly(s.centre, s.hi, '+=45_cw', 0, 2)
     s.spin(-2, .5)
     s.diveStop(s.mid, 1)
     s.spin(4, .5)
