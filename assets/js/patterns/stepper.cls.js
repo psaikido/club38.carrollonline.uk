@@ -35,19 +35,8 @@ class Stepper {
         this._setStart(rotation);
     }
 
-    _setStart(rotation = 0) {
-        this.obj = this.objCurrent = k;
-        this.objInner = kImg;
-        this.rotation = rotation;
-        this.delay = 0;
-        this.duration = .1;
-
-        this._setDimensions();
-        this._addStep();
-        return this;
-    }
-
     launch(y, duration = 1, rot = 0) {
+        this.x = this.centre;
         this.y = y;
         this.duration = duration;
         this.rotation = rot;
@@ -143,6 +132,18 @@ class Stepper {
                 timeline.to(obj, this._makeTweenObj(this.ptn[i]))
             }
         }
+    }
+
+    _setStart(rotation = 0) {
+        this.obj = this.objCurrent = k;
+        this.objInner = kImg;
+        this.rotation = rotation;
+        this.delay = 0;
+        this.duration = .1;
+
+        this._setDimensions();
+        this._addStep();
+        return this;
     }
 
     _setDimensions() {
