@@ -291,14 +291,13 @@ function L7() {
 
     let mp1 = {
         path: [
-            {x: -135, y: -200},
-            {x: s.lf1, y: s.mid + 60},
+            {x: s.lf1, y: s.mid},
             {x: s.lf1 + 40, y: s.low - 40},
-            {x: 0, y: s.low},
+            {x: s.centre, y: s.low},
         ],
         start: 0,
         end: 1,
-        curviness: .4,
+        curviness: .5,
         autoRotation: -90,
     }
 
