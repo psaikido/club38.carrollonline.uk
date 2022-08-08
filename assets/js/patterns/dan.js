@@ -175,74 +175,79 @@ function M11() {
 }
 
 function M12() {
-    reset();
+    reset()
+    let s = new Stepper(2)
+
+    let svg = document.getElementById('club38-svg');
+    let c3Text = '<circle id="circle3" cx="320" cy="210" r="80" fill="none" />';
+    let c3 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    c3.setAttribute('id', 'circle3');
+    c3.setAttribute('cx', '400');
+    c3.setAttribute('cy', '210');
+    c3.setAttribute('r', '120');
+    c3.setAttribute('fill', 'none');
+    svg.appendChild(c3);
+
+    MotionPathPlugin.convertToPath('#circle3');
 
     let slideCircle = {
-        path: '#slideCircle',
-        align: '#slideCircle',
+        path: '#circle3',
+        align: '#circle3',
         autoRotate: true,
-        alignOrigin: [0.5, 0.35],
-        start: 0,
-        end: .75,
-        offsetX: 134,
-        offsetY: 27,
-    }
-
-    let preDive = {
-        path: '#preDive',
-        align: '#preDive',
-        autoRotate: 90,
-        alignOrigin: [0.5, 0.35],
-        start: 0,
+        alignOrigin: [.5, .5],
+        start: .25,
         end: 1,
-        offsetY: -7,
+        offsetX: -2,
+        offsetY: -20,
     }
 
-    let s = new Stepper()
-        .setStart(k, kImg, 2)
-        .launch(lowIsh)
-        .spin(-5, .5, .7)
-        .fly(rtIsh, lowIsh)
-        .spin(6, .5, .8)
-        .fly(lfIsh, lowIsh)
-        .spin(-3, .5, .5)
-        .fly(lfIsh, hiIsh)
-        .innerSpin(1, .9, .1, '<')
-        .fly(rtIsh, hiIsh)
-        .innerSpin(1, .9, .1, '<')
-        .fly(rtIsh, lowIsh)
-        .innerSpin(1, .9, .1, '<')
-        .fly(lfIsh, lowIsh)
-        .innerSpin(-3, .5, 1.5)
-        .path(preDive, 3)
-        .diveStop(mid, .7)
-        .spin(-4)
-        .diveStop(low, .7)
-        .spin(7)
-        .fly(lfIsh, low, 0, .5, .8)
-        .spin(-7)
-        .fly(rtIsh, low, 0, .5, 3)
-        .innerSpin(-4, 1.2, .7, '<')
-        .innerSpin(4, 0, .7)
-        .fly(lfIsh, low, 0, .5, 3)
-        .innerSpin(4, 1.2, .7, '<')
-        .fly(lfIsh, hiIsh, 0, .5, 1.5)
-        .fly(rtIsh, hiIsh, 0, .5, 1.5)
-        .fly(rtIsh, low, '-=0.600_ccw', .5, 1.5)
-        .path(slideCircle, 5)
-        .spin('-180_ccw', .5, .4) 
-        .spin(-6, .5, .8)
-        .fly(230.077, hiIsh)
-        .fly(centre, hi, -2, 0)
-        .diveStop(mid, .7)
-        .spin(1, .5, .3)
-        .spin(1, .5, .3)
-        .spin(1, .5, .3)
-        .spin(1, .5, .3)
-        .spin(-4, .5, .7)
-        .diveStop(low, .7)
-        .spin(2, .5, .3)
-        .fly(centre, ground)
+
+    s.launch(s.low)
+    s.spin(-5, .5, .7)
+    s.fly(s.rt1, s.low)
+    s.spin(6, .5, .8)
+    s.fly(s.lf1, s.low)
+    s.spin(-3, .5, .5)
+    s.fly(s.lf1, s.hiIsh)
+    s.innerSpin(1, .9, .1, '<')
+    s.fly(s.rt1, s.hiIsh)
+    s.innerSpin(1, .9, .1, '<')
+    s.fly(s.rt1, s.low)
+    s.innerSpin(1, .9, .1, '<')
+    s.fly(s.lf1, s.low)
+    s.innerSpin(-3, .5, 1.5)
+    s.fly(s.lf1, s.hi)
+    s.fly(s.centre, s.hi, 2, 0)
+    s.diveStop(s.mid, .7)
+    s.spin(-4)
+    s.diveStop(s.low, .7)
+    s.spin(7, .3, 1)
+    s.fly(s.lf1, s.low, 0, .5, 1)
+    s.spin(-7, .3, 1)
+    s.fly(s.rt1, s.low, 0, 0, 2)
+    s.innerSpin(-4, .8, .7, '<')
+    s.innerSpin(4, 0, .7)
+    s.fly(s.lf1, s.low, 0, 0, 2)
+    s.innerSpin(4, .7, .9, '<')
+    s.fly(s.lf1, s.hiIsh, 0, .5, 1.5)
+    s.fly(s.rt1, s.hiIsh, 0, .5, 1.5)
+    s.fly(s.rt1, s.low, 0, .5, 1.5)
+    s.fly(s.centre, s.low, 0)
+    s.path(slideCircle, 0, 0, 3)
+    s.fly(s.rt1, s.low, 0, 0, 1.1)
+    s.spin('-180_ccw', .5, .4) 
+    s.spin(-6, .5, .8)
+    s.fly(s.rt1, s.hiIsh)
+    s.fly(s.centre, s.hi, -2, 0)
+    s.diveStop(s.mid, .7)
+    s.spin(1, .5, .3)
+    s.spin(1, .5, .3)
+    s.spin(1, .5, .3)
+    s.spin(1, .5, .3)
+    s.spin(-4, .5, .7)
+    s.diveStop(s.low, .7)
+    s.spin(2, .5, .3)
+    s.fly(s.centre, s.ground)
 
     s.doTimeline();
 }
