@@ -98,76 +98,78 @@ function M10() {
 }
 
 function M11() {
-    reset();
+    reset()
+    let s = new Stepper()
+
+    let svg = document.getElementById('club38-svg');
+    let c3Text = '<circle id="circle3" cx="320" cy="210" r="80" fill="none" />';
+    let c3 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    c3.setAttribute('id', 'circle3');
+    c3.setAttribute('cx', '400');
+    c3.setAttribute('cy', '210');
+    c3.setAttribute('r', '100');
+    c3.setAttribute('fill', 'none');
+    svg.appendChild(c3);
+
+    MotionPathPlugin.convertToPath('#circle3');
 
     let slideCircle = {
-        path: '#slideCircle',
-        align: '#slideCircle',
-        autoRotate: 180,
-        alignOrigin: [0.5, 0.35],
-        start: 1,
-        end: 0,
-        offsetX: 31,
-        offsetY: 28,
+        path: '#circle3',
+        align: '#circle3',
+        autoRotate: true,
+        alignOrigin: [.5, .5],
+        start: .25,
+        end: 1.25,
+        offsetX: -3,
+        offsetY: 1,
     }
 
     let slideHalfCircle = {
-        path: '#slideCircle',
-        align: '#slideCircle',
-        autoRotate: true,
-        alignOrigin: [0.5, 0.35],
-        start: 0,
-        end: .5,
-        offsetX: 31,
-        offsetY: 28,
+        path: '#circle3',
+        align: '#circle3',
+        autoRotate: -180,
+        alignOrigin: [.5, .5],
+        start: 1.25,
+        end: .75,
+        offsetX: -3,
+        offsetY: 1,
     }
 
-    let preDive = {
-        path: '#preDive',
-        align: '#preDive',
-        autoRotate: 90,
-        alignOrigin: [0.5, 0.35],
-        start: 0,
-        end: 1,
-        offsetY: -7,
-    }
-
-    let s = new Stepper()
-        .setStart(k, kImg)
-        .launch(lowIsh)
-        .spin(6)
-        .fly(centre, hiIsh)
-        .spin(-5)
-        .fly(centre, lowIsh)
-        .spin(-4, .5, .7)
-        .fly(rtIsh, lowIsh)
-        .spin(4, .5, .7)
-        .fly(centre, lowIsh, 0, 0, 1)
-        .spin(-2, .5, .8)
-        .fly(rtIsh, lowIsh + 20, -1, 0)
-        .spin(1, .5, .3)
-        .spin(1, .5, .3)
-        .spin(1, .5, .3)
-        .spin(1, .5, .3)
-        .spin(1, .5, .3)
-        .fly(lfIsh, lowIsh)
-        .spin(-3, .5, .5)
-        .path(preDive, 3)
-        .diveStop(low)
-        .spin(-1, .5, .3)
-        .spin(-1, .5, .3)
-        .spin(-1, .5, .3)
-        .spin(-1, .5, .3)
-        .spin(4, .5, .5)
-        .path(slideCircle, 6)
-        .path(slideHalfCircle, 3)
-        .fly(centre, hi)
-        .innerSpin(-2)
-        .diveStop(mid, .7)
-        .spin(-4, .5, .5)
-        .diveStop(low, .7)
-        .spin(7, .5)
-        .land()
+    s.launch(s.lowIsh)
+    s.spin(6, .5, 1)
+    s.fly(s.centre, s.hiIsh)
+    s.spin(-5, .5, .7)
+    s.fly(s.centre, s.lowIsh)
+    s.spin(-4, .5, .7)
+    s.fly(s.rt1, s.lowIsh)
+    s.spin(4, .5, .7)
+    s.fly(s.centre, s.lowIsh, 0, .3, 1)
+    s.spin(-2, .5, .8)
+    s.fly(s.rt1, s.lowIsh, -1, 0)
+    s.spin(1, .5, .3)
+    s.spin(1, .5, .3)
+    s.spin(1, .5, .3)
+    s.spin(1, .5, .3)
+    s.spin(1, .5, .3)
+    s.fly(s.lf1, s.lowIsh)
+    s.spin(-3, .5, .5)
+    s.fly(s.lf1, s.hi)
+    s.fly(s.centre, s.hi, 2, 0)
+    s.diveStop(s.low)
+    s.spin(-1, .5, .2)
+    s.spin(-1, .5, .2)
+    s.spin(-1, .5, .2)
+    s.spin(-1, .5, .2)
+    s.spin(4, .5, .7)
+    s.path(slideCircle, 0, .5, 4)
+    s.path(slideHalfCircle, 0, .5, 2)
+    s.fly(s.centre, s.hi)
+    s.spin(-2, 0)
+    s.diveStop(s.mid, .7)
+    s.spin(-4, .5, .5)
+    s.diveStop(s.low, .7)
+    s.spin(7, .5, .9)
+    s.land()
 
     s.doTimeline();
 }
