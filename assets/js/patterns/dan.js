@@ -35,56 +35,66 @@ function M9() {
 
 function M10() {
     reset();
+    let s = new Stepper()
+
+    let svg = document.getElementById('club38-svg');
+    let c3Text = '<circle id="circle3" cx="320" cy="210" r="80" fill="none" />';
+    let c3 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    c3.setAttribute('id', 'circle3');
+    c3.setAttribute('cx', '320');
+    c3.setAttribute('cy', '210');
+    c3.setAttribute('r', '80');
+    c3.setAttribute('fill', 'none');
+    svg.appendChild(c3);
+
+    MotionPathPlugin.convertToPath('#circle3');
 
     let slideCircle = {
-        path: '#slideCircle',
-        align: '#slideCircle',
+        path: '#circle3',
+        align: k,
         autoRotate: true,
-        alignOrigin: [0.5, 0.35],
-        start: .75,
-        end: 1.75,
-        offsetX: -95.5,
-        offsetY: 76,
+        alignOrigin: [.5, .5],
+        start: 0,
+        end: 1,
     }
 
-    let s = new Stepper()
-        .setStart(k, kImg)
-        .launch(low, .5)
-        .spin(-3, .5, .5)
-        .fly(rtIsh, low)
-        .spin(4, .5, .7)
-        .fly(rtIsh, ground)
-        .fly(rtIsh, low)
-        .spin(-6)
-        .fly(lfIsh, low)
-        .spin(4, .5, .7)
-        .fly(lfIsh, hiIsh, 0, .5, 1.5)
-        .fly(centre, hiIsh)
-        .spin('-=45_ccw', .5, .3)
-        .spin('-=45_ccw', .5, .3)
-        .spin('-=45_ccw', .5, .3)
-        .spin('-=45_ccw', .5, .3)
-        .spin('-=45_ccw', .5, .3)
-        .spin('-=45_ccw', .5, .3)
-        .fly(centre, hi)
-        .spin(2, 0, .3)
-        .diveStop(mid, .5)
-        .spin(4, .5, .5)
-        .diveStop(low, .5)
-        .spin(-5, .5, .7)
-        .fly(centre, ground)
-        .fly(centre, low)
-        .fly(centre - 30, low, 2, 0, 1)
-        .fly(centre - 30, ground)
-        .fly(centre - 30, low)
-        .fly(centre, low, -2, 0, 1)
-        .fly(centre, ground - 10)
-        .fly(centre - 3, lowIsh - 3, 0, .5, 1)
-        .path(slideCircle, 5)
-        .spin(-5, .5, .7)
-        .land(1.5)
+    s.launch(s.low, .5)
+    s.spin(-3, .5)
+    s.fly(s.rt1, s.low)
+    s.spin(4, .5, .7)
+    s.fly(s.rt1, s.ground)
+    s.fly(s.rt1, s.low)
+    s.spin(-6, .5, 1)
+    s.fly(s.lf1, s.low)
+    s.spin(4, .5, .7)
+    s.fly(s.lf1, s.mid, 0, .5, 1.5)
+    s.fly(s.centre, s.mid)
+    s.spin('-=45_ccw', .5, .3)
+    s.spin('-=45_ccw', .5, .3)
+    s.spin('-=45_ccw', .5, .3)
+    s.spin('-=45_ccw', .5, .3)
+    s.spin('-=45_ccw', .5, .3)
+    s.spin('-=45_ccw', .5, .3)
+    s.fly(s.centre, s.hi)
+    s.spin(2, 0)
+    s.diveStop(s.mid, .5, .8)
+    s.spin(4, .5, .5)
+    s.diveStop(s.low, .5)
+    s.spin(-5, .5, .7)
+    s.fly(s.centre, s.ground)
+    s.fly(s.centre, s.low)
+    s.fly(s.centre - 30, s.low, 2, 0, 1)
+    s.fly(s.centre - 30, s.ground)
+    s.fly(s.centre - 30, s.low)
+    s.fly(s.centre, s.low, -2, 0, 1)
+    s.fly(s.centre, s.ground - 10)
+    s.fly(s.centre, s.lowIsh, 0, .5, 1)
+    s.path(slideCircle, 5)
+    s.fly(s.centre, s.low, 0, 0, 1)
+    s.spin(-5, .5, .7)
+    s.land()
 
-    s.doTimeline();
+    s.doTimeline()
 }
 
 function M11() {
