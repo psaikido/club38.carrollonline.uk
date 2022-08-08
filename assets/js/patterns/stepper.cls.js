@@ -45,7 +45,7 @@ class Stepper {
         return this;
     }
 
-    spin(rot, delay = 0, duration = .5, label) {
+    spin(rot, delay = .5, duration = .5, label) {
         this.rotation = rot;
         this.delay = delay;
         this.duration = duration;
@@ -78,7 +78,7 @@ class Stepper {
         return this;
     }
 
-    land(duration = 1, delay = .5) {
+    land(delay = .5, duration = 1) {
         this.fly(this.x, this.ground, 0, delay, duration);
         return this;
     }
@@ -93,13 +93,12 @@ class Stepper {
         return this;
     }
 
-    path(mp, dur, rotationCount = 0, ease = 'sine.inOut') {
-        this.x = undefined;
-        this.y = undefined;
+    path(mp, rotation, duration, delay = .5, ease = 'sine.inOut') {
         this.motionPath = mp;
+        this._convertRotCode(rotation);
+        this.delay = delay;
         this.duration = dur;
         this.ease = ease;
-        this._convertRotCode(rotationCount);
 
         this._addStep();
         return this;

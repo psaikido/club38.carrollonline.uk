@@ -2,15 +2,15 @@ function L1() {
     reset()
     let s = new Stepper()
 
-    s.launch(s.mid);
-    s.spin(-1)
-    s.fly(s.lf2, s.mid, 0, .5, 1.5)
-    s.spin(2)
-    s.fly(s.rt2, s.mid, 0, .5, 2)
-    s.spin(-2)
-    s.fly(s.centre, s.mid, 0, .5, 1.5)
-    s.spin(1)
-    s.land(2);
+    s.launch(s.mid, 2);
+    s.spin(-1, 0)
+    s.fly(s.lf2, s.mid, 0, 0, 1.5)
+    s.spin(2, 0, .8)
+    s.fly(s.rt2, s.mid, 0, 0, 2)
+    s.spin(-2, 0, .8)
+    s.fly(s.centre, s.mid, 0, 0, 1.5)
+    s.spin(1, 0)
+    s.land(.5, 2);
 
     s.doTimeline();
 }
@@ -22,24 +22,24 @@ function L2() {
     s.launch(s.mid)
     s.spin(-1)
     s.fly(s.lf2, s.mid, 0, 0, 1.5)
-    s.spin(2)
+    s.spin(2, 0, .8)
     s.fly(s.rt2, s.mid, 0, 0, 2)
-    s.spin(-2)
+    s.spin(-2, 0, .8)
     s.fly(s.centre, s.mid, 0, 0, 1.5)
     s.spin(4, 0, 1)
     s.fly(s.lf2, s.mid, 0, 0, 1.5)
-    s.spin(2)
+    s.spin(2, 0, .8)
     s.fly(s.centre, s.mid, 0, 0, 1.5)
     s.spin(-4, 0, 1)
     s.fly(s.rt2, s.mid, 0, 0, 1.5)
-    s.spin(-2)
+    s.spin(-2, 0, .8)
     s.fly(s.centre, s.mid, 0, 0, 1.5)
-    s.spin(1)
+    s.spin(1, 0)
     s.fly(s.centre, s.hi, 0, 0, 1)
-    s.spin(+2)
-    s.diveStop(s.low)
-    s.spin(-2, .5)
-    s.land(1)
+    s.spin(2, 0, .8)
+    s.diveStop(s.low, 1.5, 0)
+    s.spin(-2, .5, .8)
+    s.land(.5, 1)
 
     s.doTimeline();
 }
@@ -50,16 +50,16 @@ function L3() {
     
     s.launch(s.low)
     s.spin(-2)
-    s.fly(s.centre, s.mid)
+    s.fly(s.centre, s.mid, 0, .1)
     s.fly(s.lf1, s.mid, 0, .5, 1.5)
     s.spin(-8, .5, 1.5)
     s.fly(s.rt1, s.mid, 0, .5, 2.5)
     s.spin(8, .5, 1.5)
     s.fly(s.centre, s.mid, 0, .5, 1.5)
     s.spin(1, .5)
-    s.fly(s.centre, s.lowIsh, 0, .5, 1.5)
+    s.fly(s.centre, s.low, 0, .5, 1.5)
     s.spin(-2)
-    s.land(2)
+    s.land(.5, 2)
 
     s.doTimeline();
 }
@@ -96,7 +96,7 @@ function L4() {
     };
 
     s.launch(s.low)
-    s.path(mp1, 4)
+    s.path(mp1, 0, 4)
     s.innerSpin(1, 1.6, .7, '<')
     s.fly(s.lf1, s.mid, 0, .5, 2)
     s.innerSpin(4, .5, .8)
@@ -112,7 +112,7 @@ function L4() {
     s.fly(s.centre - 30, s.ground - 10, 0, 0, 2)
     s.fly(s.centre - 30, s.mid, 0, .5, 2)
     s.fly(s.lf2, s.mid, 0, .5, 1.5)
-    s.path(mp2, 8)
+    s.path(mp2, 0, 8)
     s.innerSpin(-1, 0, 1, '<+1')
     s.innerSpin(-3, 0, 3, '<+2.6')
     s.spin(-1)
@@ -172,16 +172,16 @@ function L5() {
     s.spin(-2, .3, 1.5)
     s.fly(s.rt3, s.low, 0, .5, 3)
     s.spin('+=155_cw', .3, 1.5)
-    s.path(figure8, 10, 0, 'power0.inOut')
+    s.path(figure8, 0, 10, 0, 'power0.inOut')
     s.fly(s.rt1, s.hiIsh, '90_shortest', .5, .5)
     s.fly(s.rt1, s.lowIsh, 0, .5, 2)
-    s.fly(s.lf1, s.lowIsh, 0, .5, 2)
-    s.fly(s.lf1, s.hiIsh, 0, .5, 2)
+    s.fly(s.centre, s.lowIsh, 0, .5, 2)
+    s.fly(s.centre, s.hiIsh, 0, .5, 2)
     s.fly(s.rt1, s.hiIsh, 0, .5, 2)
     s.spin('+=60_cw', .5, 1)
-    s.path(spiralIn, 7, 0, 'sine.in')
+    s.path(spiralIn, 0, 7, 0, 'sine.in')
     s.spin('-92_ccw', .5, 1)
-    s.path(spiralOut, 7)
+    s.path(spiralOut, 0, 7, 1)
     s.spin('-=90_ccw')
     s.diveStop(s.low)
     s.spin(2, .5)
@@ -269,10 +269,10 @@ function L6() {
     s.spin('+=45_cw', .5, .3)
     s.spin('+=45_cw', .5, .3)
     s.fly(s.lf1, s.mid)
-    s.path(ironCrossNW, 2)
-    s.path(ironCrossNE, 2)
-    s.path(ironCrossSE, 2)
-    s.path(ironCrossSW, 2)
+    s.path(ironCrossNW, 0, 2)
+    s.path(ironCrossNE, 0, 2)
+    s.path(ironCrossSE, 0, 2)
+    s.path(ironCrossSW, 0, 2)
     s.spin(1, .5)
     s.fly(s.lf1, s.hi, 0);
     s.fly(s.centre, s.hi, 2, 0);
@@ -315,7 +315,7 @@ function L7() {
     s.spin('-=45_ccw', .5, .3)
     s.fly(s.lf1, s.mid, 0, .5, 2.5)
     s.spin('-=180_ccw', 0, .7)
-    s.path(mp1, 3)
+    s.path(mp1, 0, 3)
     s.innerSpin('-135_ccw', 0, 2.5, '<+=1.1')
     s.innerSpin(3, .5, 2.5)
     s.fly(s.rt1, s.low)
@@ -396,7 +396,7 @@ function L8() {
     s.spin('-=45_ccw', .5, .3)
     
     // West
-    s.path(invSlide1, 3)
+    s.path(invSlide1, 0, 3)
     s.innerSpin(2, 0, 3, '<')
     s.fly(s.lf1, s.hiIsh)
     s.fly(s.lf1, s.mid)
@@ -440,7 +440,7 @@ function L8() {
     s.spin('-=45_ccw', .5, .3)
 
     // South East
-    s.path(invSlide2, 3)
+    s.path(invSlide2, 0, 3)
     s.innerSpin(-2, 0, 3, '<')
     s.fly(s.rt1 + aBit, s.lowIsh - aBit)
     s.fly(s.rt1, s.lowIsh)
