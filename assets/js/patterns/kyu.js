@@ -363,7 +363,7 @@ function L8() {
         offsetY: 104,
     }
 
-    s.launch(s.hiIsh)
+    s.launch(s.hiIsh, 1.2)
 
     // North
     s.fly(-aBit, s.hiIsh)
