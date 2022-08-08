@@ -38,19 +38,18 @@ function M10() {
     let s = new Stepper()
 
     let svg = document.getElementById('club38-svg');
-    let c3Text = '<circle id="circle3" cx="320" cy="210" r="80" fill="none" />';
-    let c3 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-    c3.setAttribute('id', 'circle3');
-    c3.setAttribute('cx', '320');
-    c3.setAttribute('cy', '210');
-    c3.setAttribute('r', '80');
-    c3.setAttribute('fill', 'none');
-    svg.appendChild(c3);
+    let c10 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    c10.setAttribute('id', 'circle10');
+    c10.setAttribute('cx', '320');
+    c10.setAttribute('cy', '210');
+    c10.setAttribute('r', '80');
+    c10.setAttribute('fill', 'none');
+    svg.appendChild(c10);
 
-    MotionPathPlugin.convertToPath('#circle3');
+    MotionPathPlugin.convertToPath('#circle10');
 
     let slideCircle = {
-        path: '#circle3',
+        path: '#circle10',
         align: k,
         autoRotate: true,
         alignOrigin: [.5, .5],
@@ -102,34 +101,33 @@ function M11() {
     let s = new Stepper()
 
     let svg = document.getElementById('club38-svg');
-    let c3Text = '<circle id="circle3" cx="320" cy="210" r="80" fill="none" />';
-    let c3 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-    c3.setAttribute('id', 'circle3');
-    c3.setAttribute('cx', '400');
-    c3.setAttribute('cy', '210');
-    c3.setAttribute('r', '100');
-    c3.setAttribute('fill', 'none');
-    svg.appendChild(c3);
+    let c11 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    c11.setAttribute('id', 'circle11');
+    c11.setAttribute('cx', '400');
+    c11.setAttribute('cy', '210');
+    c11.setAttribute('r', '100');
+    c11.setAttribute('fill', 'none');
+    svg.appendChild(c11);
 
-    MotionPathPlugin.convertToPath('#circle3');
+    MotionPathPlugin.convertToPath('#circle11');
 
     let slideCircle = {
-        path: '#circle3',
-        align: '#circle3',
-        autoRotate: true,
+        path: '#circle11',
+        align: '#circle11',
+        autoRotate: -180,
         alignOrigin: [.5, .5],
-        start: .25,
-        end: 1.25,
+        start: 1.25,
+        end: .25,
         offsetX: -3,
         offsetY: 1,
     }
 
     let slideHalfCircle = {
-        path: '#circle3',
-        align: '#circle3',
-        autoRotate: -180,
+        path: '#circle11',
+        align: '#circle11',
+        autoRotate: 0,
         alignOrigin: [.5, .5],
-        start: 1.25,
+        start: .25,
         end: .75,
         offsetX: -3,
         offsetY: 1,
@@ -179,20 +177,19 @@ function M12() {
     let s = new Stepper(2)
 
     let svg = document.getElementById('club38-svg');
-    let c3Text = '<circle id="circle3" cx="320" cy="210" r="80" fill="none" />';
-    let c3 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-    c3.setAttribute('id', 'circle3');
-    c3.setAttribute('cx', '400');
-    c3.setAttribute('cy', '210');
-    c3.setAttribute('r', '120');
-    c3.setAttribute('fill', 'none');
-    svg.appendChild(c3);
+    let c12 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    c12.setAttribute('id', 'circle12');
+    c12.setAttribute('cx', '400');
+    c12.setAttribute('cy', '210');
+    c12.setAttribute('r', '120');
+    c12.setAttribute('fill', 'none');
+    svg.appendChild(c12);
 
-    MotionPathPlugin.convertToPath('#circle3');
+    MotionPathPlugin.convertToPath('#circle12');
 
     let slideCircle = {
-        path: '#circle3',
-        align: '#circle3',
+        path: '#circle12',
+        align: '#circle12',
         autoRotate: true,
         alignOrigin: [.5, .5],
         start: .25,
@@ -256,20 +253,19 @@ function M13() {
     let s = new Stepper(2)
 
     let svg = document.getElementById('club38-svg');
-    let c3Text = '<circle id="circle3" cx="320" cy="210" r="80" fill="none" />';
-    let c3 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-    c3.setAttribute('id', 'circle3');
-    c3.setAttribute('cx', '400');
-    c3.setAttribute('cy', '210');
-    c3.setAttribute('r', '120');
-    c3.setAttribute('fill', 'none');
-    svg.appendChild(c3);
+    let c13 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    c13.setAttribute('id', 'circle13');
+    c13.setAttribute('cx', '400');
+    c13.setAttribute('cy', '210');
+    c13.setAttribute('r', '120');
+    c13.setAttribute('fill', 'none');
+    svg.appendChild(c13);
 
-    MotionPathPlugin.convertToPath('#circle3');
+    MotionPathPlugin.convertToPath('#circle13');
 
     let slideCircle = {
-        path: '#circle3',
-        align: '#circle3',
+        path: '#circle13',
+        align: '#circle13',
         autoRotate: true,
         alignOrigin: [.5, .5],
         start: .25,
@@ -321,20 +317,19 @@ function M14() {
     let s = new Stepper()
 
     let svg = document.getElementById('club38-svg');
-    let c3Text = '<circle id="circle3" cx="320" cy="210" r="80" fill="none" />';
-    let c3 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-    c3.setAttribute('id', 'circle3');
-    c3.setAttribute('cx', '400');
-    c3.setAttribute('cy', '210');
-    c3.setAttribute('r', '120');
-    c3.setAttribute('fill', 'none');
-    svg.appendChild(c3);
+    let c14 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    c14.setAttribute('id', 'circle14');
+    c14.setAttribute('cx', '400');
+    c14.setAttribute('cy', '210');
+    c14.setAttribute('r', '120');
+    c14.setAttribute('fill', 'none');
+    svg.appendChild(c14);
 
-    MotionPathPlugin.convertToPath('#circle3');
+    MotionPathPlugin.convertToPath('#circle14');
 
     let slideCircle = {
-        path: '#circle3',
-        align: '#circle3',
+        path: '#circle14',
+        align: '#circle14',
         autoRotate: -90,
         alignOrigin: [.5, .5],
         start: .25,
@@ -342,6 +337,7 @@ function M14() {
         offsetX: -2,
         offsetY: -20,
     }
+
     // #3 walk-it-off
     s.spin('+=30_cw', .3, .5);
     s.spin('-=60_ccw', .3, .5);

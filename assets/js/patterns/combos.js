@@ -1,245 +1,244 @@
 function combos(combo) {
-  let s;
+    let c;
 
-  switch (combo) {
-    case 1:
-      s = combo1();
-      break;
+    switch (combo) {
+        case 1:
+            c = combo1();
+            break;
 
-    case 2:
-      s = combo2();
-      break;
+        case 2:
+            c = combo2();
+            break;
 
-    case 3:
-      s = combo3();
-      break;
+        case 3:
+            c = combo3();
+            break;
 
-    case 4:
-      s = combo4();
-      break;
+        case 4:
+            c = combo4();
+            break;
 
-    case 5:
-      s = combo5();
-      break;
+        case 5:
+            c = combo5();
+            break;
 
-    case 6:
-      s = combo6();
-      break;
+        case 6:
+            c = combo6();
+            break;
 
-    case 7:
-      s = combo7();
-      break;
+        case 7:
+            c = combo7();
+            break;
 
-    case 8:
-      s = combo8();
-      break;
+        case 8:
+            c = combo8();
+            break;
 
-    case 9:
-      s = combo9();
-      break;
+        case 9:
+            c = combo9();
+            break;
 
-    case 10:
-      s = combo10();
-      break;
+        case 10:
+            c = combo10();
+            break;
 
-    default:
-  }
+        default:
+    }
 
-  s.doTimeline();
+    c.doTimeline();
 }
 
+// shock-snap
 function combo1() {
-  // shock-snap
-  reset();
+    reset()
+    let s = new Stepper()
 
-  let s = new Stepper()
-    .setStart(k, kImg)
-    .launch(hiIsh)
-    .spin(2, .5, .5)
-    .diveStop(low)
-    .spin(3, .2, .5)
+    s.launch(s.hi)
+    s.spin(2, .5, .5)
+    s.diveStop(s.low)
+    s.spin(3, .2, .5)
 
-  return s;
+    return s;
 }
 
+// shock-snap-tip
 function combo2() {
-  // shock-snap-tip
-  reset();
+    reset()
+    let s = new Stepper()
 
-  let s = new Stepper()
-    .setStart(k, kImg)
-    .launch(hiIsh)
-    .spin(2, .5, .5)
-    .diveStop(low)
-    .spin(3, .2, .5)
-    .land()
+    s.launch(s.hi)
+    s.spin(2, .5, .5)
+    s.diveStop(s.low)
+    s.spin(3, .2, .5)
+    s.land()
 
-  return s;
+    return s;
 }
 
+// walk-it-off
 function combo3() {
-  // walk-it-off
-  reset();
+    reset()
+    let s = new Stepper()
 
-  let s = new Stepper()
-    .setStart(k, kImg)
-    .spin('+=30_cw', .3, .5)
-    .spin('-=60_ccw', .3, .5)
-    .spin('+=60_cw', .3, .5)
-    .spin('-=60_ccw', .3, .5)
-    .spin('+=60_cw', .3, .5)
-    .spin('-=30_ccw', .3, .5)
+    s.spin('+=30_cw', .3, .5)
+    s.spin('-=60_ccw', .3, .5)
+    s.spin('+=60_cw', .3, .5)
+    s.spin('-=60_ccw', .3, .5)
+    s.spin('+=60_cw', .3, .5)
+    s.spin('-=30_ccw', .3, .5)
 
-  return s;
+    return s;
 }
 
+// launch-snaps
 function combo4() {
-  // launch-snaps
-  reset();
+    reset()
+    let s = new Stepper()
 
-  let s = new Stepper()
-    .setStart(k, kImg)
-    .launch(low, .5)
-    .spin(3, .5, .5)
-    .fly(lfIsh, low)
-    .spin(-2, .5, .5)
-    .fly(centre, low)
-    .spin(-4, .5, .5)
-    .land()
-    .spin(1, 1, .2)
-    .launch(low, .5)
-    .spin(-5, .5, .5)
-    .fly(rtIsh, low)
-    .spin(2, .5, .3)
-    .fly(centre, low)
-    .spin(5, .5, .8)
-    .land()
+    s.launch(s.low, .5)
+    s.spin(3, .5, .5)
+    s.fly(s.lf, s.low)
+    s.spin(-2, .5, .5)
+    s.fly(s.centre, s.low)
+    s.spin(-4, .5, .5)
+    s.land()
+    s.spin(1, 1, .2)
+    s.launch(s.low, .5)
+    s.spin(-5, .5, .5)
+    s.fly(s.rt1, s.low)
+    s.spin(2, .5, .3)
+    s.fly(s.centre, s.low)
+    s.spin(5, .5, .8)
+    s.land()
 
-  return s;
+    return s;
 }
 
+// shock-clock-snap
 function combo5() {
-  // shock-clock-snap
-  reset();
+    reset()
+    let s = new Stepper()
 
-  let s = new Stepper()
-    .setStart(k, kImg)
-    .launch(hiIsh)
-    .spin(2, .5, .5)
-    .diveStop(low)
-    .spin(1, .5, .3)
-    .spin(1, .5, .3)
-    .spin(1, .5, .3)
-    .spin(1, .5, .3)
-    .spin(-4, .5, .5)
+    s.launch(s.hi)
+    s.spin(2, .5, .5)
+    s.diveStop(s.low)
+    s.spin(1, .5, .3)
+    s.spin(1, .5, .3)
+    s.spin(1, .5, .3)
+    s.spin(1, .5, .3)
+    s.spin(-4, .5, .5)
 
-  return s;
+    return s;
 }
 
+// go-snap-back-vslide
 function combo6() {
-  // go-snap-back-vslide
-  reset();
+    reset()
+    let s = new Stepper()
 
-  let s = new Stepper()
-    .setStart(k, kImg)
-    .launch(low)
-    .spin(1, .5, .3)
-    .fly(rtIsh, low)
-    .spin(4, 0, .5)
-    .fly(centre, low)
-    .spin(-3, 0, .5)
-    .fly(rtIsh, low)
+    s.launch(s.low)
+    s.spin(1, .5, .3)
+    s.fly(s.rt1, s.low)
+    s.spin(4, 0, .5)
+    s.fly(s.centre, s.low)
+    s.spin(-3, 0, .5)
+    s.fly(s.rt1, s.low)
 
-  return s;
+    return s;
 }
 
+// v-slide-v
 function combo7() {
-  // v-slide-v
-  reset();
+    reset()
+    let s = new Stepper()
 
-  let s = new Stepper()
-    .setStart(k, kImg)
-    .launch(low)
-    .spin(-1, .5, .3)
-    .fly(lfIsh, low)
-    .spin(-1, .5, .3)
-    .fly(rtIsh, low, 0, .5, 3)
-    .spin(-4, 1.2, .7, '<')
-    .fly(lfIsh, low, 0, .5, 3)
-    .spin(4, 1.2, .7, '<')
+    s.launch(s.low)
+    s.spin(-1, .5, .3)
+    s.fly(s.lf1, s.low)
+    s.spin(-1, .5, .3)
+    s.fly(s.rt1, s.low, 0, .5, 3)
+    s.spin(-4, 1.2, .7, '<')
+    s.fly(s.lf1, s.low, 0, .5, 3)
+    s.spin(4, 1.2, .7, '<')
 
-  return s;
+    return s;
 }
 
+// don-fox-snap-box
 function combo8() {
-  // don-fox-snap-box
-  reset();
+    reset()
+    let s = new Stepper()
 
-  let s = new Stepper()
-    .setStart(k, kImg)
-    .launch(low)
-    .spin(-1, .5, .3)
-    .fly(lfIsh, low)
-    .spin(1, .5, .3)
-    .fly(lfIsh, hiIsh)
-    .innerSpin(1, .9, .1, '<')
-    .fly(rtIsh, hiIsh)
-    .innerSpin(1, .9, .1, '<')
-    .fly(rtIsh, lowIsh)
-    .innerSpin(1, .9, .1, '<')
-    .fly(lfIsh, lowIsh)
-    .innerSpin(1, .9, .1, '<')
+    s.launch(s.low)
+    s.spin(-1, .5, .3)
+    s.fly(s.lf1, s.low)
+    s.spin(1, .5, .3)
+    s.fly(s.lf1, s.hiIsh)
+    s.innerSpin(1, .9, .1, '<')
+    s.fly(s.rt1, s.hiIsh)
+    s.innerSpin(1, .9, .1, '<')
+    s.fly(s.rt1, s.low)
+    s.innerSpin(1, .9, .1, '<')
+    s.fly(s.lf1, s.low)
+    s.innerSpin(1, .9, .1, '<')
 
-  return s;
+    return s;
 }
 
+// snap-clock-snap
 function combo9() {
-  // snap-clock-snap
-  reset();
+    reset()
+    let s = new Stepper()
+    
+    s.launch(s.low)
+    s.spin(-1, .5, .3)
+    s.fly(s.lf1, s.low)
+    s.spin(2, .5, .3)
+    s.fly(s.centre, s.low)
+    s.spin(-4, .5, .5)
+    s.spin(1, .5, .3)
+    s.spin(1, .5, .3)
+    s.spin(1, .5, .3)
+    s.spin(1, .5, .3)
+    s.spin(-4, .5, .5)
+    s.fly(s.rt1, s.low)
 
-  let s = new Stepper()
-    .setStart(k, kImg)
-    .launch(low)
-    .spin(-1, .5, .3)
-    .fly(lfIsh, low)
-    .spin(2, .5, .3)
-    .fly(centre, low)
-    .spin(-4, .5, .5)
-    .spin(1, .5, .3)
-    .spin(1, .5, .3)
-    .spin(1, .5, .3)
-    .spin(1, .5, .3)
-    .spin(-4, .5, .5)
-    .fly(rtIsh, low)
-
-  return s;
+    return s;
 }
 
+// shock-circle-snap
 function combo10() {
-  // shock-circle-snap
-  reset();
+    reset()
+    let s = new Stepper()
 
-  let slideCircle = {
-    path: [
-      {x: lfIsh, y: mid},
-      {x: 0, y: hiIsh},
-      {x: rtIsh, y: mid},
-      {x: 0, y: low},
-    ],
-    start: 0,
-    end: 1,
-    curviness: 1,
-  }
+    let svg = document.getElementById('club38-svg');
+    let cc3 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    cc3.setAttribute('id', 'circlec3');
+    cc3.setAttribute('cx', '400');
+    cc3.setAttribute('cy', '210');
+    cc3.setAttribute('r', '120');
+    cc3.setAttribute('fill', 'none');
+    svg.appendChild(cc3);
 
-  let s = new Stepper()
-    .setStart(k, kImg)
-    .launch(hiIsh, 1.5)
-    .spin(-2, .5, .3)
-    .diveStop(low)
-    .path(slideCircle, 8)
-    .innerSpin(4, 0, 8, '<')
-    .spin(-5, 0, .5)
-    .fly(rtIsh, low)
+    MotionPathPlugin.convertToPath('#circlec3');
 
-  return s;
+    let slideCircle = {
+        path: '#circlec3',
+        align: '#circlec3',
+        autoRotate: true,
+        alignOrigin: [.5, .5],
+        start: .25,
+        end: 1.25,
+        offsetX: -2,
+        offsetY: -20,
+    }
+
+    s.launch(s.hi, 1.5)
+    s.spin(-2, .5, .3)
+    s.diveStop(s.low)
+    s.path(slideCircle, 0, .5, 6)
+    s.spin(-5, 0, .5)
+    s.fly(s.rt1, s.low)
+
+    return s;
 }
