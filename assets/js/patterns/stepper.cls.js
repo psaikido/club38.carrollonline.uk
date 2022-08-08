@@ -93,11 +93,11 @@ class Stepper {
         return this;
     }
 
-    path(mp, rotation, duration, delay = .5, ease = 'sine.inOut') {
+    path(mp, rotation, delay = .5, duration = 3, ease = 'sine.inOut') {
         this.motionPath = mp;
         this._convertRotCode(rotation);
         this.delay = delay;
-        this.duration = dur;
+        this.duration = duration;
         this.ease = ease;
 
         this._addStep();
