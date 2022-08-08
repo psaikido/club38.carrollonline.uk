@@ -162,8 +162,10 @@ function L5() {
         align: '#spiralOut',
         autoRotate: 90,
         alignOrigin: [0.5, 0.35],
-        start: 0.995,
+        start: .996,
         end: 0,
+        offsetX: -13,
+        offsetY: 6,
     }
 
     s.launch(s.low)
@@ -172,7 +174,7 @@ function L5() {
     s.spin(-2, .3, 1.5)
     s.fly(s.rt3, s.low, 0, .5, 3)
     s.spin('+=155_cw', .3, 1.5)
-    s.path(figure8, 0, .5, 10, 'power0.inOut')
+    s.path(figure8, 0, .5, 10, 'power0.in')
     s.fly(s.rt1, s.hiIsh, '90_shortest', .5, .5)
     s.fly(s.rt1, s.lowIsh, 0, .5, 2)
     s.fly(s.centre, s.lowIsh, 0, .5, 2)
@@ -181,9 +183,9 @@ function L5() {
     s.spin('+=60_cw', .5, 1)
     s.path(spiralIn, 0, 0, 7, 'sine.in')
     s.spin('-92_ccw', .5, 1)
-    s.path(spiralOut, 0, 1, 7)
-    s.spin('-=90_ccw')
-    s.diveStop(s.low)
+    s.path(spiralOut, 0, 1, 7, 'sine.inOut')
+    s.spin('-=90_ccw', 0)
+    s.diveStop(s.low, 1.3, .8)
     s.spin(2, .5)
     s.land()
 
