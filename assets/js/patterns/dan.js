@@ -178,9 +178,9 @@ function M12() {
     let svg = document.getElementById('club38-svg');
     let c12 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
     c12.setAttribute('id', 'circle12');
-    c12.setAttribute('cx', '400');
-    c12.setAttribute('cy', '210');
-    c12.setAttribute('r', '120');
+    c12.setAttribute('cx', s.codeCentre)
+    c12.setAttribute('cy', s.codeHeight / 2)
+    c12.setAttribute('r', '100');
     c12.setAttribute('fill', 'none');
     svg.appendChild(c12);
 
@@ -194,7 +194,7 @@ function M12() {
         start: .25,
         end: 1,
         offsetX: -2,
-        offsetY: -20,
+        offsetY: 10,
     }
 
     s.launch(s.low)
@@ -224,10 +224,11 @@ function M12() {
     s.innerSpin(4, 0, .7)
     s.fly(s.lf1, s.low, 0, 0, 2)
     s.innerSpin(4, .7, .9, '<')
+    s.fly(s.lf1, s.low, 0, 0, 0)
     s.fly(s.lf1, s.hiIsh, 0, .5, 1.5)
     s.fly(s.rt1, s.hiIsh, 0, .5, 1.5)
-    s.fly(s.rt1, s.low, 0, .5, 1.5)
-    s.fly(s.centre, s.low, 0)
+    s.fly(s.rt1, s.low, 0, .5, 1)
+    s.fly(s.centre, s.low, 0, .5, .8)
     s.path(slideCircle, 0, 0, 3)
     s.fly(s.rt1, s.low, 0, 0, 1.1)
     s.spin('-180_ccw', .5, .4) 
