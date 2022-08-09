@@ -100,16 +100,15 @@ function M11() {
     reset()
     let s = new Stepper()
 
-    let svg = document.getElementById('club38-svg');
-    let c11 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-    c11.setAttribute('id', 'circle11');
-    c11.setAttribute('cx', '400');
-    c11.setAttribute('cy', '210');
-    c11.setAttribute('r', '100');
-    c11.setAttribute('fill', 'none');
-    svg.appendChild(c11);
-
-    MotionPathPlugin.convertToPath('#circle11');
+    let svg = document.getElementById('club38-svg')
+    let c11 = document.createElementNS('http://www.w3.org/2000/svg', 'circle')
+    c11.setAttribute('id', 'circle11')
+    c11.setAttribute('cx', s.codeCentre)
+    c11.setAttribute('cy', s.codeHeight / 2)
+    c11.setAttribute('r', '100')
+    c11.setAttribute('fill', 'none')
+    svg.appendChild(c11)
+    MotionPathPlugin.convertToPath('#circle11')
 
     let slideCircle = {
         path: '#circle11',
@@ -119,7 +118,7 @@ function M11() {
         start: 1.25,
         end: .25,
         offsetX: -3,
-        offsetY: 1,
+        offsetY: 10,
     }
 
     let slideHalfCircle = {
@@ -130,7 +129,7 @@ function M11() {
         start: .25,
         end: .75,
         offsetX: -3,
-        offsetY: 1,
+        offsetY: 10,
     }
 
     s.launch(s.lowIsh)
