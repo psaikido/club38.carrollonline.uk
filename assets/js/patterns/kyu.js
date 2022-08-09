@@ -342,32 +342,29 @@ function L8() {
     reset()
     let s = new Stepper()
 
-    let svg = document.getElementById('club38-svg');
-    let c8 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-    c8.setAttribute('id', 'circle8');
-    c8.setAttribute('cx', '400');
-    c8.setAttribute('cy', '200');
-    c8.setAttribute('r', s.colWidth);
-    c8.setAttribute('fill', 'none');
-    svg.appendChild(c8);
-
-    MotionPathPlugin.convertToPath('#circle8');
     let invSlide1 = {
-        path: '#circle8',
+        path: [
+            {x: s.rt1, y: s.mid},
+            {x: s.centre, y: s.low},
+            {x: s.lf1, y: s.mid},
+        ],
         align: k,
         start: 0,
-        end: .5,
-        curviness: .4,
+        end: 1,
+        curviness: .6,
     }
 
     let invSlide2 = {
-        path: '#circle8',
+        path: [
+            {x: s.lf1, y: s.hiIsh},
+            {x: s.lf1, y: s.lowIsh},
+            {x: s.centre, y: s.low},
+            {x: s.rt1, y: s.lowIsh},
+        ],
         align: k,
-        start: .66,
-        end: .05,
-        curviness: .4,
-        offsetX: 189,
-        offsetY: 104,
+        start: 0,
+        end: 1,
+        curviness: .6,
     }
 
     s.launch(s.hiIsh, 1.2)
