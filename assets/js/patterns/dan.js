@@ -255,9 +255,9 @@ function M13() {
     let svg = document.getElementById('club38-svg');
     let c13 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
     c13.setAttribute('id', 'circle13');
-    c13.setAttribute('cx', '400');
-    c13.setAttribute('cy', '210');
-    c13.setAttribute('r', '120');
+    c13.setAttribute('cx', s.codeCentre)
+    c13.setAttribute('cy', s.codeHeight / 2)
+    c13.setAttribute('r', '100');
     c13.setAttribute('fill', 'none');
     svg.appendChild(c13);
 
@@ -271,7 +271,7 @@ function M13() {
         start: .25,
         end: 1.25,
         offsetX: -2,
-        offsetY: -20,
+        offsetY: 10,
     }
 
     s.launch(s.low)
@@ -302,7 +302,7 @@ function M13() {
     s.fly(s.rt1, s.lowIsh)
     s.spin(5, .5, .9)
     s.fly(s.lf1, s.lowIsh)
-    s.spin(-6, .5)
+    s.spin(-6, .5, .9)
     s.fly(s.lf1, s.hi)
     s.fly(s.centre, s.hi, 2, 0, .8)
     s.diveStop(s.low, .7)
