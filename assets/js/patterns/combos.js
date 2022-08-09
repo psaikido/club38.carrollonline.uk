@@ -214,9 +214,9 @@ function combo10() {
     let svg = document.getElementById('club38-svg');
     let cc3 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
     cc3.setAttribute('id', 'circlec3');
-    cc3.setAttribute('cx', '400');
-    cc3.setAttribute('cy', '210');
-    cc3.setAttribute('r', '120');
+    cc3.setAttribute('cx', s.codeCentre)
+    cc3.setAttribute('cy', s.codeHeight / 2)
+    cc3.setAttribute('r', '100');
     cc3.setAttribute('fill', 'none');
     svg.appendChild(cc3);
 
@@ -230,7 +230,7 @@ function combo10() {
         start: .25,
         end: 1.25,
         offsetX: -2,
-        offsetY: -20,
+        offsetY: 10,
     }
 
     s.launch(s.hi, 1.5)
