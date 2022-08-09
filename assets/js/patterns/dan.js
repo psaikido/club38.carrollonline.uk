@@ -319,9 +319,9 @@ function M14() {
     let svg = document.getElementById('club38-svg');
     let c14 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
     c14.setAttribute('id', 'circle14');
-    c14.setAttribute('cx', '400');
-    c14.setAttribute('cy', '210');
-    c14.setAttribute('r', '120');
+    c14.setAttribute('cx', s.codeCentre)
+    c14.setAttribute('cy', s.codeHeight / 2)
+    c14.setAttribute('r', '110');
     c14.setAttribute('fill', 'none');
     svg.appendChild(c14);
 
@@ -335,7 +335,7 @@ function M14() {
         start: .25,
         end: 1.25,
         offsetX: -2,
-        offsetY: -20,
+        offsetY: 10,
     }
 
     // #3 walk-it-off
