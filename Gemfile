@@ -4,4 +4,4 @@ source "https://rubygems.org"
 
 gem 'jekyll'
 gem 'jekyll-bootstrap-sass'
-gem 'jekyll-sitemap'
+gem 'webrick'

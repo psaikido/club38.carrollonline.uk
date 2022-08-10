@@ -12,7 +12,6 @@ kramdown:
 
 plugins:
     - jekyll-bootstrap-sass
-    - jekyll-sitemap
 
 sass:
     sass_dir: _sass
