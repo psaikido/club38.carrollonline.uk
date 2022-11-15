@@ -23,7 +23,7 @@ body {
 section.kite-panels {
     border: 1px solid #000;
     width: 1000px;
-    height: 650px;
+    height: auto;
     padding: 20px;
     margin: 30px auto;
     background-image: url(/assets/images/bright-blue-sky-with-a-few-tiny-white-clouds.jpg);
@@ -105,12 +105,9 @@ svg.revolution-reflex-xx text {
     color: #333;
     background-color: #ddd;
 
-    .clrGroup1 {
-        width: 30%;
-        float: left;
-    }
-
-    .clrGroup2 {
+    .clrGroup1,
+    .clrGroup2,
+    .clrGroup3 {
         width: 30%;
         float: left;
     }
@@ -178,5 +175,19 @@ svg.revolution-reflex-xx text {
 
     #clr13+label {
         background-color: var(--green);
+    }
+}
+
+.chosen-values {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template: "left right";
+
+    .col-left {
+        grid: "left";
+    }
+
+    .col-right {
+        grid: "right";
     }
 }

@@ -10,5 +10,14 @@ $( document ).ready(function() {
         /* Add the chosen class. It should correspond to the 
          * colours set up in the kite-color.css file */
         $(this).addClass("panel " + clr);
+        
+        /* Show the chosen colour in the relevant display. */
+        let disp = "#display-" + this.id;
+        $(disp).text(clr);
+    });
+
+    /* Show/hide the labels on the panels. */
+    $('.toolbox #labels').click(function() {
+        $('svg.revolution-reflex-xx text').toggle();
     });
 });
