@@ -1,15 +1,14 @@
 $( document ).ready(function() {
-    function fillClr(elem) {
+    /* Bind a click event to each panel in the kite's svg */
+    $('.kite-panels .panel').on("click", function () {
+        /* Discover the currently selected colour */
         let clr = $('input[name="clrs"]:checked').val();
-        $(elem).removeClass();
-        $(elem).addClass("panel " + clr);
-    }
 
-    $('#L1').click(function () {
-        fillClr(this);
-    });
+        /* Clear out old classes */
+        $(this).removeClass();
 
-    $('#L2').click(function () {
-        fillClr(this);
+        /* Add the chosen class. It should correspond to the 
+         * colours set up in the kite-color.css file */
+        $(this).addClass("panel " + clr);
     });
 });
