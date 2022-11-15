@@ -20,4 +20,18 @@ $( document ).ready(function() {
     $('.toolbox #labels').click(function() {
         $('svg.revolution-reflex-xx text').toggle();
     });
+
+    $('button#ready-for-screenshot').click(function() {
+        screenshotToggle();
+    });
+
+    $('button#show-toolbox').click(function() {
+        screenshotToggle();
+    });
+
+    function screenshotToggle() {
+        $('.kite-panels p').toggle();
+        $('.kite-panels .toolbox').toggle();
+        $('#show-toolbox').toggle();
+    }
 });

@@ -28,6 +28,10 @@ section.kite-panels {
     margin: 30px auto;
     background-image: url(/assets/images/bright-blue-sky-with-a-few-tiny-white-clouds.jpg);
     background-size: cover;
+
+    p {
+        color: white;
+    }
 }
 
 svg.revolution-reflex-xx {
@@ -185,9 +189,16 @@ svg.revolution-reflex-xx text {
 
     .col-left {
         grid: "left";
+        margin-left: 75%;
     }
 
     .col-right {
         grid: "right";
+        margin-left: 200px;
     }
+}
+
+#show-toolbox {
+    display: none;
+    text-align: right;
 }
