@@ -29,6 +29,13 @@ $( document ).ready(function() {
         screenshotToggle();
     });
 
+    $('button#reset').click(function() {
+        $('.revolution-reflex-xx').children('.panel').each(function(i) {
+            $(this).removeClass();
+            $(this).addClass('panel');
+        });
+    });
+
     function screenshotToggle() {
         $('.kite-panels p').toggle();
         $('.kite-panels .toolbox').toggle();
