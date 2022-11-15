@@ -1,0 +1,182 @@
+:root {
+ --yellow:      #ffff00;
+ --tangerine:   #FFD000;
+ --orange:      #FF9A00;
+ --red:         #FF0000;
+ --bright-blue: #00AFF1;
+ --dark-blue:   #1F3593;
+ --purple:      #AC2293;
+ --light-grey:  #cdcdcd;
+ --dark-grey:   #818181;
+ --black:       #000000;
+ --flo-yellow:  #C9FF00;
+ --flo-green:   #02f41a;
+ --green:       #4cb780;
+}
+
+body {
+    background-color: var(--dark-grey);
+    font-family: 'Paprika', normal;
+    font-size: 1.1em;
+}
+
+section.kite-panels {
+    border: 1px solid #000;
+    width: 1000px;
+    height: 650px;
+    padding: 20px;
+    margin: 30px auto;
+    background-image: url(/assets/images/bright-blue-sky-with-a-few-tiny-white-clouds.jpg);
+    background-size: cover;
+}
+
+svg.revolution-reflex-xx {
+    fill: #eee;
+
+    .panel {
+        stroke: #000000;
+        stroke-width: 7px;
+
+        // Each radio button in the toolbox has a value that corresponds to the following classes.
+        // Use jquery to add these classes when a panel is clicked.
+        &.yellow {
+            fill: var(--yellow);
+        }
+
+        &.tangerine {
+            fill: var(--tangerine);
+        }
+
+        &.orange {
+            fill: var(--orange);
+        }
+
+        &.red {
+            fill: var(--red);
+        }
+
+        &.bright-blue {
+            fill: var(--bright-blue);
+        }
+
+        &.dark-blue {
+            fill: var(--dark-blue);
+        }
+
+        &.purple {
+            fill: var(--purple);
+        }
+
+        &.light-grey {
+            fill: var(--light-grey);
+        }
+
+        &.dark-grey {
+            fill: var(--dark-grey);
+        }
+
+        &.black {
+            fill: var(--black);
+        }
+
+        &.flo-yellow {
+            fill: var(--flo-yellow);
+        }
+
+        &.flo-green {
+            fill: var(--flo-green);
+        }
+
+        &.green {
+            fill: var(--green);
+        }
+    }
+}
+
+svg.revolution-reflex-xx text {
+    fill: #000000;
+    font-size: 100px;
+}
+
+.toolbox {
+    height: 287px;
+    border-top: 1px solid #333;
+    padding: 10px;
+    color: #333;
+    background-color: #ddd;
+
+    .clrGroup1 {
+        width: 30%;
+        float: left;
+    }
+
+    .clrGroup2 {
+        width: 30%;
+        float: left;
+    }
+
+    input[type="radio"] {
+        margin-bottom: 14px;
+    }
+
+    label {
+        padding: 3px;
+    }
+
+    #clr1+label {
+        background-color: var(--yellow);
+    }
+
+    #clr2+label {
+        background-color: var(--tangerine);
+    }
+
+    #clr3+label {
+        background-color: var(--orange);
+    }
+
+    #clr4+label {
+        background-color: var(--red);
+    }
+
+    #clr5+label {
+        background-color: var(--bright-blue);
+        color: #fff;
+    }
+
+    #clr6+label {
+        background-color: var(--dark-blue);
+        color: #fff;
+    }
+
+    #clr7+label {
+        background-color: var(--purple);
+        color: #fff;
+    }
+
+    #clr8+label {
+        background-color: var(--light-grey);
+    }
+
+    #clr9+label {
+        background-color: var(--dark-grey);
+        color: #fff;
+    }
+
+    #clr10+label {
+        background-color: var(--black);
+        color: #fff;
+    }
+
+    #clr11+label {
+        background-color: var(--flo-yellow);
+    }
+
+    #clr12+label {
+        background-color: var(--flo-green);
+    }
+
+    #clr13+label {
+        background-color: var(--green);
+    }
+}
