@@ -74,7 +74,7 @@
     <polygon class="panel" id="L10" points="4382,1076.6 4017.9,850.2 3076.9,1434.4 3353.9,1740.4 "></polygon>
     <text x="3700" y="1300" text-anchor="middle">L10</text>
 
-    <polygon class="center" fill="#FFFFFF" stroke="#000000" stroke-width="6" points="4033.1,237.1 3656.4,582 4388.5,1076.4 5126.8,582 4769.3,237.8 "></polygon>
+    <polygon class="center" id="center-panel" stroke-width="6" points="4033.1,237.1 3656.4,582 4388.5,1076.4 5126.8,582 4769.3,237.8 "></polygon>
 
     <polygon class="panel" id="R1" points="8319.2,623.8 7895.4,629.8 7204.2,1594.6 7354.5,2396.6 8376.1,712 "></polygon>
     <text x="7700" y="1300" text-anchor="middle">R1</text>
