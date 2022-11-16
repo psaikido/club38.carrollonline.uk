@@ -65,6 +65,8 @@ $( document ).ready(function() {
         if (scheme == 'blues') blues();
         if (scheme == 'greenblack') greenblack();
         if (scheme == 'hot') hot();
+        if (scheme == 'purplelimeblack') purplelimeblack();
+        if (scheme == 'redwhiteblue') redwhiteblue();
     });
 
     /* Called by the user choosing a color and a panel and also by
@@ -172,5 +174,51 @@ $( document ).ready(function() {
         changeClr($('#R9'), 'red');
         changeClr($('#L10'), 'white');
         changeClr($('#R10'), 'white');
+    }
+
+    function purplelimeblack() {
+        changeClr($('#L1'), 'purple');
+        changeClr($('#R1'), 'purple');
+        changeClr($('#L2'), 'black');
+        changeClr($('#R2'), 'black');
+        changeClr($('#L3'), 'flo-yellow');
+        changeClr($('#R3'), 'flo-yellow');
+        changeClr($('#L4'), 'purple');
+        changeClr($('#R4'), 'purple');
+        changeClr($('#L5'), 'black');
+        changeClr($('#R5'), 'black');
+        changeClr($('#L6'), 'flo-yellow');
+        changeClr($('#R6'), 'flo-yellow');
+        changeClr($('#L7'), 'flo-yellow');
+        changeClr($('#R7'), 'flo-yellow');
+        changeClr($('#L8'), 'black');
+        changeClr($('#R8'), 'black');
+        changeClr($('#L9'), 'white');
+        changeClr($('#R9'), 'white');
+        changeClr($('#L10'), 'purple');
+        changeClr($('#R10'), 'purple');
+    }
+
+    function redwhiteblue() {
+        changeClr($('#L1'), 'bright-blue');
+        changeClr($('#R1'), 'bright-blue');
+        changeClr($('#L2'), 'white');
+        changeClr($('#R2'), 'white');
+        changeClr($('#L3'), 'red');
+        changeClr($('#R3'), 'red');
+        changeClr($('#L4'), 'red');
+        changeClr($('#R4'), 'red');
+        changeClr($('#L5'), 'dark-blue');
+        changeClr($('#R5'), 'dark-blue');
+        changeClr($('#L6'), 'dark-blue');
+        changeClr($('#R6'), 'dark-blue');
+        changeClr($('#L7'), 'white');
+        changeClr($('#R7'), 'white');
+        changeClr($('#L8'), 'dark-blue');
+        changeClr($('#R8'), 'dark-blue');
+        changeClr($('#L9'), 'white');
+        changeClr($('#R9'), 'white');
+        changeClr($('#L10'), 'red');
+        changeClr($('#R10'), 'red');
     }
 });
