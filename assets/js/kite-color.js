@@ -64,6 +64,7 @@ $( document ).ready(function() {
         if (scheme == 'blackred') blackred();
         if (scheme == 'blues') blues();
         if (scheme == 'greenblack') greenblack();
+        if (scheme == 'hot') hot();
     });
 
     /* Called by the user choosing a color and a panel and also by
@@ -148,5 +149,28 @@ $( document ).ready(function() {
         changeClr($('#R8'), 'green');
         changeClr($('#R9'), 'black');
         changeClr($('#R10'), 'black');
+    }
+
+    function hot() {
+        changeClr($('#L1'), 'white');
+        changeClr($('#R1'), 'white');
+        changeClr($('#L2'), 'flo-yellow');
+        changeClr($('#R2'), 'flo-yellow');
+        changeClr($('#L3'), 'red');
+        changeClr($('#R3'), 'red');
+        changeClr($('#L4'), 'red');
+        changeClr($('#R4'), 'red');
+        changeClr($('#L5'), 'yellow');
+        changeClr($('#R5'), 'yellow');
+        changeClr($('#L6'), 'orange');
+        changeClr($('#R6'), 'orange');
+        changeClr($('#L7'), 'flo-yellow');
+        changeClr($('#R7'), 'flo-yellow');
+        changeClr($('#L8'), 'orange');
+        changeClr($('#R8'), 'orange');
+        changeClr($('#L9'), 'red');
+        changeClr($('#R9'), 'red');
+        changeClr($('#L10'), 'white');
+        changeClr($('#R10'), 'white');
     }
 });
