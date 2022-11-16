@@ -184,6 +184,8 @@ svg.revolution-reflex text {
 }
 
 .chosen-values {
+    margin-top: 15px;
+
     table td.head {
         font-weight: bold;
         text-decoration: underline;
@@ -192,7 +194,7 @@ svg.revolution-reflex text {
     color: white;
     display: grid;
     grid-template-areas: ". left right .";
-    grid-template-columns: 2fr 1fr 1fr 2fr;
+    grid-template-columns: 257px 1fr 1fr auto;
 
     .col-left {
         grid-area: left;

@@ -50,9 +50,9 @@ permalink: /pattern-index.html
         <th colspan="3"><h6>Colorizers</h6></th>
     </tr>
     <tr>
-        <td colspan="3">
-            <a href="/pages/kite-color-xx.html">XX</a><br />
-            <a href="/pages/kite-color-tarantula.html">Tarantula</a>
+        <td class="col1">
+            <a href="/kite-color-xx.html">XX</a><br />
+            <a href="/kite-color-tarantula.html">Tarantula</a><br />
         </td>
     </tr>
 </table>

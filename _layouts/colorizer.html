@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include head.html %}
+    <body>
+        <link rel="stylesheet" href="../assets/css/kite-color.css">
+        <script type="text/javascript" src="../assets/js/kite-color.js"></script>
+
+        <div class="wrap">
+
+            <div class="header">
+                <div class="header-text">
+                    {{ page.title }}
+                </div>
+            </div>
+
+            <div class="main-content">
+
+                <section class="kite-colorizer">
+                    {{ content }}
+
+                    {% include toolbox.html %}
+                </section>
+
+            </div>
+        </div>
+
+        {% include footer.html %}
+    </body>
+</html>
+
