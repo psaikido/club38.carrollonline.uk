@@ -1,6 +1,6 @@
 $( document ).ready(function() {
     /* Bind a click event to each panel in the kite's svg */
-    $('.kite-panels .panel').on("click", function () {
+    $('.revolution-reflex .panel').on("click", function () {
         /* Discover the currently selected colour */
         let clr = $('input[name="clrs"]:checked').val();
 
@@ -18,7 +18,7 @@ $( document ).ready(function() {
 
     /* Show/hide the labels on the panels. */
     $('.toolbox #labels').click(function() {
-        $('svg.revolution-reflex-xx text').toggle();
+        $('svg.revolution-reflex text').toggle();
     });
 
     $('button#ready-for-screenshot').click(function() {
@@ -30,15 +30,15 @@ $( document ).ready(function() {
     });
 
     $('button#reset').click(function() {
-        $('.revolution-reflex-xx').children('.panel').each(function(i) {
+        $('.revolution-reflex').children('.panel').each(function(i) {
             $(this).removeClass();
             $(this).addClass('panel');
         });
     });
 
     function screenshotToggle() {
-        $('.kite-panels p').toggle();
-        $('.kite-panels .toolbox').toggle();
+        $('.kite-colorizer p').toggle();
+        $('.kite-colorizer .toolbox').toggle();
         $('#show-toolbox').toggle();
     }
 });
