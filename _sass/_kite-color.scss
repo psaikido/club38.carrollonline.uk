@@ -109,6 +109,24 @@ svg.revolution-reflex text {
     font-size: 100px;
 }
 
+svg.revolution-reflex #center-panel {
+    fill: #ffffff;
+    font-size: 100px;
+
+    &.reverse {
+        fill: #000000;
+    }
+}
+
+svg.revolution-reflex .logo {
+    stroke: #00000;
+    stroke-width: 6px;
+
+    &.reverse {
+        stroke: #ffffff;
+    }
+}
+
 .toolbox {
     width: 1000px;
     height: auto;
