@@ -24,15 +24,16 @@
    inkscape:pagecheckerboard="0"
    inkscape:deskcolor="#d1d1d1"
    showgrid="false"
-   inkscape:zoom="0.26914154"
-   inkscape:cx="4532.9308"
-   inkscape:cy="572.18963"
-   inkscape:window-width="1876"
-   inkscape:window-height="991"
+   inkscape:zoom="0.17614603"
+   inkscape:cx="4757.4163"
+   inkscape:cy="1158.13"
+   inkscape:window-width="1322"
+   inkscape:window-height="679"
    inkscape:window-x="20"
    inkscape:window-y="67"
    inkscape:window-maximized="1"
-   inkscape:current-layer="revolution-reflex-tarantula" />
+   inkscape:current-layer="revolution-reflex-tarantula"
+   showguides="false" />
     <style
    type="text/css"
    id="style2">
@@ -125,16 +126,11 @@
    text-anchor="middle"
    id="text1655">L7</text>
 
-    <g
+   <path
    id="L8"
-   class="panel"><path
-     d="M 4031.6115,242.71393 2061.6,2050.9 2131.4,1164.9 3634,245.3 Z"
-     id="path2370"
-     sodipodi:nodetypes="ccccc" /><path
-     style="color:#000000;fill:#000000;-inkscape-stroke:none"
-     d="m 4043.2012,234.31885 3.1289,-1.51807 -413.2071,9.51953 -1504.5937,920.81839 -70.5176,895.1074 z m -4.7285,4.66357 -1973.2852,1804.57228 69.084,-876.8945 1500.6055,-918.37895 z"
-     id="path2372"
-     sodipodi:nodetypes="ccccccccccc" /></g>
+   class="panel"
+   d="M 2081.2006,2027.0224 4017.7964,242.34539 3650.4462,251.79917 2140.1013,1182.9733 Z"
+   sodipodi:nodetypes="ccccc" />
     <text
    x="2430"
    y="1380"
@@ -145,6 +141,7 @@
    class="panel"
    id="L10"
    points="4382,1076.6 4017.9,850.2 3076.9,1434.4 3353.9,1740.4 " />
+
     <text
    x="3885.1975"
    y="1148.8171"
