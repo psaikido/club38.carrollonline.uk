@@ -1,17 +1,18 @@
 :root {
- --yellow:      #ffff00;
- --tangerine:   #FFD000;
- --orange:      #FF9A00;
- --red:         #FF0000;
- --bright-blue: #00AFF1;
- --dark-blue:   #1F3593;
- --purple:      #AC2293;
- --light-grey:  #cdcdcd;
- --dark-grey:   #818181;
- --black:       #000000;
- --flo-yellow:  #C9FF00;
- --flo-green:   #02f41a;
- --green:       #4cb780;
+    --white:       #ffffff;
+    --yellow:      #ffff00;
+    --tangerine:   #FFD000;
+    --orange:      #FF9A00;
+    --red:         #FF0000;
+    --bright-blue: #00AFF1;
+    --dark-blue:   #1F3593;
+    --purple:      #AC2293;
+    --light-grey:  #cdcdcd;
+    --dark-grey:   #818181;
+    --black:       #000000;
+    --flo-yellow:  #C9FF00;
+    --flo-green:   #02f41a;
+    --green:       #4cb780;
 }
 
 svg path {
@@ -29,7 +30,6 @@ section.kite-colorizer {
     padding: 20px;
     margin: 0 auto;
     background-image: url(/assets/images/bright-blue-sky-with-a-few-tiny-white-clouds.jpg);
-    background-size: cover;
 
     p, p a, h1 {
         color: white;
@@ -37,6 +37,8 @@ section.kite-colorizer {
 }
 
 .revolution-reflex {
+    margin: 15px auto;
+
     .panel {
         fill: #eee;
         stroke: #000000;
@@ -44,6 +46,10 @@ section.kite-colorizer {
 
         // Each radio button in the toolbox has a value that corresponds to the following classes.
         // Use jquery to add these classes when a panel is clicked.
+        &.white {
+            fill: var(--white);
+        }
+
         &.yellow {
             fill: var(--yellow);
         }
@@ -104,11 +110,13 @@ svg.revolution-reflex text {
 }
 
 .toolbox {
+    width: 1000px;
     height: auto;
+    margin: 8px auto;
     border-top: 1px solid #333;
     padding: 10px;
     color: #333;
-    background-color: #ddd;
+    background-color: #ccc;
 
     .clrGroup1,
     .clrGroup2,
@@ -123,6 +131,10 @@ svg.revolution-reflex text {
 
     label {
         padding: 3px;
+    }
+
+    #clr0+label {
+        background-color: var(--white);
     }
 
     #clr1+label {

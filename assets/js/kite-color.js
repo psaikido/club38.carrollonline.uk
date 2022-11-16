@@ -38,7 +38,7 @@ $( document ).ready(function() {
 
     function screenshotToggle() {
         $('.kite-colorizer p').toggle();
-        $('.kite-colorizer .toolbox').toggle();
+        $('.toolbox').toggle();
         $('#show-toolbox').toggle();
     }
 });
