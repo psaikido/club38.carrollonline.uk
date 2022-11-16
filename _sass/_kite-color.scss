@@ -14,10 +14,12 @@
  --green:       #4cb780;
 }
 
-body {
-    background-color: var(--dark-grey);
-    font-family: 'Paprika', normal;
-    font-size: 1.1em;
+svg path {
+    fill: black;
+}
+
+.header {
+    border: none;
 }
 
 section.kite-colorizer {
@@ -25,7 +27,7 @@ section.kite-colorizer {
     width: 1000px;
     height: auto;
     padding: 20px;
-    margin: 30px auto;
+    margin: 0 auto;
     background-image: url(/assets/images/bright-blue-sky-with-a-few-tiny-white-clouds.jpg);
     background-size: cover;
 
@@ -102,7 +104,7 @@ svg.revolution-reflex text {
 }
 
 .toolbox {
-    height: 287px;
+    height: auto;
     border-top: 1px solid #333;
     padding: 10px;
     color: #333;

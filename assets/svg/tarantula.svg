@@ -8,7 +8,7 @@
    viewBox="0 0 8555 2951"
    style="enable-background:new 0 0 8555 2951;"
    xml:space="preserve"
-   sodipodi:docname="xx.svg"
+   sodipodi:docname="tarantula.svg"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14, custom)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -24,15 +24,15 @@
    inkscape:pagecheckerboard="0"
    inkscape:deskcolor="#d1d1d1"
    showgrid="false"
-   inkscape:zoom="0.37624542"
-   inkscape:cx="2570.131"
-   inkscape:cy="781.40486"
-   inkscape:window-width="1322"
-   inkscape:window-height="679"
+   inkscape:zoom="0.18695082"
+   inkscape:cx="4749.9122"
+   inkscape:cy="2182.3921"
+   inkscape:window-width="1876"
+   inkscape:window-height="991"
    inkscape:window-x="20"
    inkscape:window-y="67"
    inkscape:window-maximized="1"
-   inkscape:current-layer="Layer_1" />
+   inkscape:current-layer="revolution-reflex-tarantula" />
 	<style
    type="text/css"
    id="style2">
@@ -134,10 +134,7 @@
    text-anchor="middle"
    id="text28">L8</text>
 
-    <polygon
-   class="panel"
-   id="L9"
-   points="3087.8,1443.1 4030.1,858.2 3632.1,598.3 2917.2,1256.3 " />
+    
     <text
    x="3400"
    y="1100"

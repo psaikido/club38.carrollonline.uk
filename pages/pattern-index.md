@@ -6,12 +6,6 @@ permalink: /pattern-index.html
 
 <table class="individualPatternLinks">
     <tr>
-        <th colspan="3">
-            <h5>Links to individual pages</h5>
-        </th>
-    </tr>
-
-    <tr>
         <th><h6>First levels</h6></th>
         <th><h6>Master levels</h6></th>
         <th><h6>Combos & Skills</h6></th>
@@ -50,6 +44,15 @@ permalink: /pattern-index.html
             scaxy
             alzpi
             -->
+        </td>
+    </tr>
+    <tr>
+        <th colspan="3"><h6>Colorizers</h6></th>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <a href="/pages/kite-color-xx.html">XX</a><br />
+            <a href="/pages/kite-color-tarantula.html">Tarantula</a>
         </td>
     </tr>
 </table>
