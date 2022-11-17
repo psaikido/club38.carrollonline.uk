@@ -45,12 +45,22 @@ $( document ).ready(function() {
         screenshotToggle();
     });
 
+    /* Generate a screenshot with the html2canvas library */
+    $('button#html2canvas').click(function() {
+        html2canvas(document.querySelector(".kite-colorizer")).then(canvas => {
+            document.getElementById('displayCanvas').appendChild(canvas);
+            //document.body.appendChild(canvas)
+        });
+    });
+
     // Toggle between editing and screenshot modes
     // Called from both modes by different buttons
     function screenshotToggle() {
         $('.kite-colorizer p').toggle();
         $('.toolbox').toggle();
         $('#show-toolbox').toggle();
+        $('#html2canvas').toggle();
+        $('#displayCanvas').toggle();
     }
 
     /* Take all color choices off */
@@ -83,17 +93,6 @@ $( document ).ready(function() {
         }
     });
 
-    /* Preset color schemes */
-    $('#presets').change(function() {
-        let scheme = $(this).val();
-        if (scheme == 'blackred') blackred();
-        if (scheme == 'blues') blues();
-        if (scheme == 'greenblack') greenblack();
-        if (scheme == 'hot') hot();
-        if (scheme == 'purplelimeblack') purplelimeblack();
-        if (scheme == 'redwhiteblue') redwhiteblue();
-    });
-
     /* Called by the user choosing a color and a panel and also by
      * the preset drop down */
     function changeClr(elem, clr) {
@@ -108,6 +107,17 @@ $( document ).ready(function() {
         let disp = "#display-" + elem.id;
         $(disp).text(clr);
     }
+
+    /* Preset color schemes */
+    $('#presets').change(function() {
+        let scheme = $(this).val();
+        if (scheme == 'blackred') blackred();
+        if (scheme == 'blues') blues();
+        if (scheme == 'greenblack') greenblack();
+        if (scheme == 'hot') hot();
+        if (scheme == 'purplelimeblack') purplelimeblack();
+        if (scheme == 'redwhiteblue') redwhiteblue();
+    });
 
     function blackred() {
         changeClr($('#L1'), 'black');

@@ -14,11 +14,20 @@
 
             <div class="main-content">
 
+                {% include {{ page.toolbox }} %}
+
                 <section class="kite-colorizer">
-                    {{ content }}
+                    <div class="kite">
+                        {{ content }}
+                    </div>
+
+                    {% include chosen-values.html %}
                 </section>
 
-                {% include {{ page.toolbox }} %}
+                <div id="displayCanvas"></div>
+
+                <button id="show-toolbox">exit screenshot mode</button>
+                <button id="html2canvas">take screenshot</button>
             </div>
         </div>
 

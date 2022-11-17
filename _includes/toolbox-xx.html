@@ -1,191 +1,98 @@
 <div class="toolbox">
-    <fieldset>
-        <legend>toolbox xx</legend>
+    <div class="clrGroup">
 
-        <div class="clrGroup1">
-            <input id="clr0" type="radio" name="clrs" value="white">
+        <div id="clrWrap-0" class="clrChooser">
             <label for="clr0">white</label>
-            <br />
+            <input id="clr0" type="radio" name="clrs" value="white">
+        </div>
 
-            <input id="clr1" type="radio" name="clrs" value="yellow">
+        <div id="clrWrap-1" class="clrChooser">
             <label for="clr1">yellow</label>
-            <br />
+            <input id="clr1" type="radio" name="clrs" value="yellow">
+        </div>
 
-            <input id="clr2" type="radio" name="clrs" value="tangerine">
+        <div id="clrWrap-2" class="clrChooser">
             <label for="clr2">tangerine</label>
-            <br />
+            <input id="clr2" type="radio" name="clrs" value="tangerine">
+        </div>
 
-            <input id="clr3" type="radio" name="clrs" value="orange">
+        <div id="clrWrap-3" class="clrChooser">
             <label for="clr3">orange</label>
-            <br />
+            <input id="clr3" type="radio" name="clrs" value="orange">
+        </div>
 
-            <input id="clr4" type="radio" name="clrs" value="red" checked>
+        <div id="clrWrap-4" class="clrChooser">
             <label for="clr4">red</label>
-            <br />
+            <input id="clr4" type="radio" name="clrs" value="red" checked>
+        </div>
 
-            <input id="clr5" type="radio" name="clrs" value="bright-blue">
+        <div id="clrWrap-5" class="clrChooser">
             <label for="clr5">bright-blue</label>
-            <br />
+            <input id="clr5" type="radio" name="clrs" value="bright-blue">
+        </div>
 
-            <input id="clr6" type="radio" name="clrs" value="dark-blue">
+        <div id="clrWrap-6" class="clrChooser">
             <label for="clr6">dark-blue</label>
+            <input id="clr6" type="radio" name="clrs" value="dark-blue">
         </div>
 
-        <div class="clrGroup2">
-            <input id="clr7" type="radio" name="clrs" value="purple">
+        <div id="clrWrap-7" class="clrChooser">
             <label for="clr7">purple</label>
-            <br />
+            <input id="clr7" type="radio" name="clrs" value="purple">
+        </div>
 
-            <input id="clr8" type="radio" name="clrs" value="light-grey">
+        <div id="clrWrap-8" class="clrChooser">
             <label for="clr8">light-grey</label>
-            <br />
+            <input id="clr8" type="radio" name="clrs" value="light-grey">
+        </div>
 
-            <input id="clr9" type="radio" name="clrs" value="dark-grey">
+        <div id="clrWrap-9" class="clrChooser">
             <label for="clr9">dark-grey</label>
-            <br />
+            <input id="clr9" type="radio" name="clrs" value="dark-grey">
+        </div>
 
-            <input id="clr10" type="radio" name="clrs" value="black">
+        <div id="clrWrap-10" class="clrChooser">
             <label for="clr10">black</label>
-            <br />
+            <input id="clr10" type="radio" name="clrs" value="black">
+        </div>
 
-            <input id="clr11" type="radio" name="clrs" value="flo-yellow">
+        <div id="clrWrap-11" class="clrChooser">
             <label for="clr11">flo-yellow</label>
-            <br />
+            <input id="clr11" type="radio" name="clrs" value="flo-yellow">
+        </div>
 
-            <input id="clr12" type="radio" name="clrs" value="flo-green">
+        <div id="clrWrap-12" class="clrChooser">
             <label for="clr12">flo-green</label>
-            <br />
-
-            <input id="clr13" type="radio" name="clrs" value="green">
+            <input id="clr12" type="radio" name="clrs" value="flo-green">
+        </div>
+        
+        <div id="clrWrap-13" class="clrChooser">
             <label for="clr13">green</label>
+            <input id="clr13" type="radio" name="clrs" value="green">
         </div>
-
-        <div class="clrGroup3">
-            <input type="checkbox" id="labels" checked>
-            <label for="labels">show labels</label><br />
-
-            <input type="checkbox" id="reverse-center">
-            <label for="reverse-center">reverse central panel</label><br />
-
-            <input type="checkbox" id="mirror">
-            <label for="mirror">mirror</label><br />
-
-            <select id="presets">
-                <option value="">-presets-</option>
-                <option value="blackred">Black/Red</option>
-                <option value="blues">Blues</option>
-                <option value="greenblack">Green Black</option>
-                <option value="hot">Hot</option>
-                <option value="purplelimeblack">Purple/Lime/Black</option>
-                <option value="redwhiteblue">Red/White/Blue</option>
-            </select> <br /><br />
-
-            <button id="reset">reset</button> <br />
-            <button id="ready-for-screenshot">screenshot mode</button>
-        </div>
-    </fieldset>
-</div>
-
-<div class="chosen-values">
-    <div class="col-left">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="head">left</td>
-                    <td class="head">colors</td>
-                </tr>
-                <tr>
-                    <td>L1</td>
-                    <td id="display-L1"></td>
-                </tr>
-                <tr>
-                    <td>L2</td>
-                    <td id="display-L2"></td>
-                </tr>
-                <tr>
-                    <td>L3</td>
-                    <td id="display-L3"></td>
-                </tr>
-                <tr>
-                    <td>L4</td>
-                    <td id="display-L4"></td>
-                </tr>
-                <tr>
-                    <td>L5</td>
-                    <td id="display-L5"></td>
-                </tr>
-                <tr>
-                    <td>L6</td>
-                    <td id="display-L6"></td>
-                </tr>
-                <tr>
-                    <td>L7</td>
-                    <td id="display-L7"></td>
-                </tr>
-                <tr>
-                    <td>L8</td>
-                    <td id="display-L8"></td>
-                </tr>
-                <tr>
-                    <td>L9</td>
-                    <td id="display-L9"></td>
-                </tr>
-                <tr>
-                    <td>L10</td>
-                    <td id="display-L10"></td>
-                </tr>
-            </tbody>
-        </table>
     </div>
-    <div class="col-right">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="head">right</td>
-                    <td class="head">colors</td>
-                </tr>
-                <tr>
-                    <td>R1</td>
-                    <td id="display-R1"></td>
-                </tr>
-                <tr>
-                    <td>R2</td>
-                    <td id="display-R2"></td>
-                </tr>
-                <tr>
-                    <td>R3</td>
-                    <td id="display-R3"></td>
-                </tr>
-                <tr>
-                    <td>R4</td>
-                    <td id="display-R4"></td>
-                </tr>
-                <tr>
-                    <td>R5</td>
-                    <td id="display-R5"></td>
-                </tr>
-                <tr>
-                    <td>R6</td>
-                    <td id="display-R6"></td>
-                </tr>
-                <tr>
-                    <td>R7</td>
-                    <td id="display-R7"></td>
-                </tr>
-                <tr>
-                    <td>R8</td>
-                    <td id="display-R8"></td>
-                </tr>
-                <tr>
-                    <td>R9</td>
-                    <td id="display-R9"></td>
-                </tr>
-                <tr>
-                    <td>R10</td>
-                    <td id="display-R10"></td>
-                </tr>
-            </tbody>
-        </table>
+
+    <div class="buttons">
+        <input type="checkbox" id="labels" checked>
+        <label for="labels">show labels</label><br />
+
+        <input type="checkbox" id="reverse-center">
+        <label for="reverse-center">reverse logo</label><br />
+
+        <input type="checkbox" id="mirror">
+        <label for="mirror">mirror</label><br />
+
+        <select id="presets">
+            <option value="">-presets-</option>
+            <option value="blackred">Black/Red</option>
+            <option value="blues">Blues</option>
+            <option value="greenblack">Green Black</option>
+            <option value="hot">Hot</option>
+            <option value="purplelimeblack">Purple/Lime/Black</option>
+            <option value="redwhiteblue">Red/White/Blue</option>
+        </select> <br /><br />
+
+        <button id="reset">reset</button> <br />
+        <button id="ready-for-screenshot">screenshot mode</button>
     </div>
 </div>
-<button id="show-toolbox">exit screenshot mode</button>
