@@ -96,6 +96,12 @@ $( document ).ready(function() {
     /* Called by the user choosing a color and a panel and also by
      * the preset drop down */
     function changeClr(elem, clr) {
+        /* If this is being called from a preset scheme then we need
+         * to use its first child */
+        if (!elem.id) {
+            elem = elem[0];
+        }
+        
         /* Clear out old classes */
         $(elem).removeClass();
 
