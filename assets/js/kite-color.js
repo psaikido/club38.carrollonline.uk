@@ -35,11 +35,6 @@ $( document ).ready(function() {
         $('svg.revolution-reflex text').toggle();
     });
 
-    /* Take out clutter for a clean screenshot */
-    $('button#ready-for-screenshot').click(function() {
-        screenshotToggle();
-    });
-
     /* Used to get back to the full editing mode */
     $('button#show-toolbox').click(function() {
         screenshotToggle();
@@ -47,19 +42,22 @@ $( document ).ready(function() {
 
     /* Generate a screenshot with the html2canvas library */
     $('button#html2canvas').click(function() {
-        html2canvas(document.querySelector(".kite-colorizer")).then(canvas => {
+        screenshotToggle();
+        let shotarea = document.querySelector(".kite-colorizer");
+        $(".kite-colorizer .chosen-values").css({"background-color": "white", "color": "black"});
+
+        html2canvas(shotarea).then(canvas => {
             document.getElementById('displayCanvas').appendChild(canvas);
-            //document.body.appendChild(canvas)
+            // document.body.appendChild(canvas)
         });
     });
 
     // Toggle between editing and screenshot modes
     // Called from both modes by different buttons
     function screenshotToggle() {
-        $('.kite-colorizer p').toggle();
+        $('.kite-colorizer .kite p').toggle();
         $('.toolbox').toggle();
         $('#show-toolbox').toggle();
-        $('#html2canvas').toggle();
         $('#displayCanvas').toggle();
     }
 

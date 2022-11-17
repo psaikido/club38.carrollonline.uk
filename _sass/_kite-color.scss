@@ -64,7 +64,6 @@ svg path {
             text-decoration: underline;
         }
 
-        color: white;
         display: grid;
         grid-template-areas: ". left right .";
         grid-template-columns: 257px 1fr 1fr auto;
@@ -255,20 +254,20 @@ svg path {
     }
 }
 
-#chosen-values,
 #show-toolbox,
-#html2canvas, 
 #displayCanvas {
     display: none;
 }
 
 #displayCanvas {
-    width: 1000px;
+    width: 989px;
     height: auto;
     position: fixed;
     top: 30px;
-    margin: 0 auto;
+    margin: 0 auto 0 210px;
     border: 1px solid red;
+    background: black;
+    color: white;
 }
 
 #displayCanvas::before {
