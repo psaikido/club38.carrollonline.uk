@@ -1,8 +1,32 @@
 $( document ).ready(function() {
     /* Bind a click event to each panel in the kite's svg */
     $('.revolution-reflex .panel').on("click", function () {
+        let clickedWing = '';
+        let otherWing = '';
+        let panel = 0;
+        let mirrorId = '';
+
         /* Discover the currently selected colour */
         let clr = $('input[name="clrs"]:checked').val();
+        let mirror = $('#mirror:checked').val();
+        
+        /* Get the id and color and mirror to the other wing */
+        if (mirror == 'on') {
+            clickedWing = this.id.substr(0, 1);
+            panel = this.id.substr(1);
+
+            if (clickedWing == 'L') {
+                otherWing = 'R';
+            } else if (clickedWing == 'R') {
+                otherWing = 'L';
+            } else {
+                otherWing = '';
+            }
+
+            mirrorElem = $('.panel#' + otherWing + panel);
+            changeClr(mirrorElem[0], clr);
+        }
+
         changeClr(this, clr);
     });
 
@@ -37,6 +61,7 @@ $( document ).ready(function() {
         });
     });
 
+    /* Central logo panel can be white on black or reversed */
     $('.toolbox #reverse-center').click(function() {
         let centerPanel = $('svg.revolution-reflex #center-panel');
         let logo = $('svg.revolution-reflex .logo');
