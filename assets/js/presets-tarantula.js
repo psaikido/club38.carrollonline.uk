@@ -26,8 +26,6 @@ function blackred() {
     changeClr($('#R7'), 'black');
     changeClr($('#L8'), 'light-grey');
     changeClr($('#R8'), 'light-grey');
-    changeClr($('#L9'), 'red');
-    changeClr($('#R9'), 'red');
     changeClr($('#L10'), 'light-grey');
     changeClr($('#R10'), 'light-grey');
 }
@@ -49,8 +47,6 @@ function blues() {
     changeClr($('#R7'), 'light-grey');
     changeClr($('#L8'), 'dark-blue');
     changeClr($('#R8'), 'dark-blue');
-    changeClr($('#L9'), 'dark-grey');
-    changeClr($('#R9'), 'dark-grey');
     changeClr($('#L10'), 'bright-blue');
     changeClr($('#R10'), 'bright-blue');
 }
@@ -64,7 +60,6 @@ function greenblack() {
     changeClr($('#L6'), 'black');
     changeClr($('#L7'), 'green');
     changeClr($('#L8'), 'black');
-    changeClr($('#L9'), 'green');
     changeClr($('#L10'), 'green');
     changeClr($('#R1'), 'black');
     changeClr($('#R2'), 'black');
@@ -74,7 +69,6 @@ function greenblack() {
     changeClr($('#R6'), 'green');
     changeClr($('#R7'), 'black');
     changeClr($('#R8'), 'green');
-    changeClr($('#R9'), 'black');
     changeClr($('#R10'), 'black');
 }
 
@@ -95,8 +89,6 @@ function hot() {
     changeClr($('#R7'), 'flo-yellow');
     changeClr($('#L8'), 'orange');
     changeClr($('#R8'), 'orange');
-    changeClr($('#L9'), 'red');
-    changeClr($('#R9'), 'red');
     changeClr($('#L10'), 'white');
     changeClr($('#R10'), 'white');
 }
@@ -118,8 +110,6 @@ function purplelimeblack() {
     changeClr($('#R7'), 'flo-yellow');
     changeClr($('#L8'), 'black');
     changeClr($('#R8'), 'black');
-    changeClr($('#L9'), 'white');
-    changeClr($('#R9'), 'white');
     changeClr($('#L10'), 'purple');
     changeClr($('#R10'), 'purple');
 }
@@ -141,8 +131,6 @@ function redwhiteblue() {
     changeClr($('#R7'), 'white');
     changeClr($('#L8'), 'dark-blue');
     changeClr($('#R8'), 'dark-blue');
-    changeClr($('#L9'), 'white');
-    changeClr($('#R9'), 'white');
     changeClr($('#L10'), 'red');
     changeClr($('#R10'), 'red');
 }
