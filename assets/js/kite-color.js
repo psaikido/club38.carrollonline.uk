@@ -51,6 +51,15 @@ $( document ).ready(function() {
         changeClr(this, clr);
     });
 
+    /* Bind a click event to each color's radio 
+     * so that the 'current-color' can get updated 
+     * with each choice. Change the whole toolbox's 
+     * background color to the current choice. */
+    $('.toolbox input[name="clrs"]').on("click", function () {
+        let clr = 'var(--' + $(this).val() + ')';
+        $(':root').css('--current-color', clr);
+    });
+
     /* Show/hide the labels on the panels. */
     $('.toolbox #labels').click(function() {
         $('svg.revolution-reflex text').toggle();

@@ -13,6 +13,7 @@
     --flo-yellow:  #C9FF00;
     --flo-green:   #02f41a;
     --green:       #4cb780;
+    --current-color: var(--orange);
 }
 
 svg path {
@@ -177,7 +178,12 @@ svg path {
     height: auto;
     padding: 10px;
     color: #333;
-    background-color: var(--dark-grey);
+    background-color: var(--current-color);
+
+    .buttons {
+        background-color: var(--dark-grey);
+        padding: 5px;
+    }
 
     .clrGroup {
         text-align: right;
