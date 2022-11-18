@@ -74,11 +74,10 @@ $( document ).ready(function() {
     $('button#html2canvas').click(function() {
         screenshotToggle();
         let shotarea = document.querySelector(".kite-colorizer");
-        $(".kite-colorizer .chosen-values").css({"background-color": "white", "color": "black"});
+        $(".kite-colorizer .chosen-values").css({"background-color": "#343a40", "color": "#cdc8c8"});
 
         html2canvas(shotarea).then(canvas => {
             document.getElementById('displayCanvas').appendChild(canvas);
-            // document.body.appendChild(canvas)
         });
     });
 
