@@ -277,7 +277,7 @@ svg path {
     width: 989px;
     height: auto;
     position: fixed;
-    top: 30px;
+    top: 44px;
     margin: 0 auto 0 210px;
     border: 1px solid red;
     background: black;
@@ -285,5 +285,8 @@ svg path {
 }
 
 #displayCanvas::before {
-    content: 'right click save image';
+    content: 'right click / save image';
+    position: absolute;
+    top: -30px;
+    left: 0;
 }

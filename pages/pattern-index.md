@@ -52,8 +52,11 @@ permalink: /pattern-index.html
     <tr>
         <td class="col1">
             <a href="/kite-color-rx.html">RX</a><br />
+            <a href="/kite-color-rx-spider.html">RX Spider</a><br />
+        </td>
+        <td class="col2">
             <a href="/kite-color-xx.html">XX</a><br />
-            <a href="/kite-color-tarantula.html">Tarantula</a><br />
+            <a href="/kite-color-tarantula.html">XX Tarantula</a><br />
         </td>
     </tr>
 </table>
