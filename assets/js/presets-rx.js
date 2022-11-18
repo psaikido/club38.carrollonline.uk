@@ -8,6 +8,22 @@ $('#presets').change(function() {
     if (scheme == 'blue_grey_black_wcenter') blue_grey_black_wcenter();
 });
 
+function blackCenter() {
+    $('svg.revolution-reflex #center-panel').addClass('reverse');
+    $('svg.revolution-reflex .logo').children().each(function() {
+        $(this).removeClass();
+        $(this).addClass('logo reverse');
+    });
+}
+
+function whiteCenter() {
+    $('svg.revolution-reflex #center-panel').removeClass('reverse');
+    $('svg.revolution-reflex .logo').children().each(function() {
+        $(this).removeClass();
+        $(this).addClass('logo');
+    });
+}
+
 function red_grey_black_bcenter() {
     changeClr($('#L1'), 'black');
     changeClr($('#R1'), 'black');
@@ -31,6 +47,8 @@ function red_grey_black_bcenter() {
     changeClr($('#R10'), 'black');
     changeClr($('#L11'), 'red');
     changeClr($('#R11'), 'red');
+
+    blackCenter();
 }
 
 function brightblue_grey_black_bcenter() {
@@ -56,6 +74,8 @@ function brightblue_grey_black_bcenter() {
     changeClr($('#R10'), 'black');
     changeClr($('#L11'), 'bright-blue');
     changeClr($('#R11'), 'bright-blue');
+
+    blackCenter();
 }
 
 function purple_grey_black_wcenter() {
@@ -81,6 +101,8 @@ function purple_grey_black_wcenter() {
     changeClr($('#R10'), 'black');
     changeClr($('#L11'), 'purple');
     changeClr($('#R11'), 'purple');
+
+    whiteCenter();
 }
 
 function lime_grey_black_bcenter() {
@@ -106,6 +128,8 @@ function lime_grey_black_bcenter() {
     changeClr($('#R10'), 'black');
     changeClr($('#L11'), 'flo-green');
     changeClr($('#R11'), 'flo-green');
+
+    blackCenter();
 }
 
 
@@ -132,5 +156,7 @@ function blue_grey_black_wcenter() {
     changeClr($('#R10'), 'black');
     changeClr($('#L11'), 'dark-blue');
     changeClr($('#R11'), 'dark-blue');
+
+    whiteCenter();
 }
 
