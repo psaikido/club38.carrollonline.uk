@@ -1,4 +1,40 @@
     <div class="clrGroup">
+        <script>
+            /* Give a dropdown to jump to different models */
+            function models() {
+                var sel = document.getElementById('modelChanger').value;
+                window.location.href = sel;
+            }
+
+            /* Establish what page is calling so it can be selected in the newly loaded dropdown */
+            var url = window.location.href;
+            var filename = url.split('/').pop();
+            
+            var opts = [
+                ["", "change model"],
+                ["/kite-color-rx.html", "RX"],
+                ["/kite-color-rx-spider.html", "RX Spider"],
+                ["/kite-color-rx-super-spider.html", "RX Super Spider"],
+                ["/kite-color-xx.html", "XX"],
+                ["/kite-color-xx-tarantula.html", "XX Tarantula"],
+                ["/kite-color-xx-super-tarantula.html", "XX Super Tarantula"]
+                ];
+
+            var startSel = '<select id="modelChanger" onchange="models();">';
+            var stringOpts = '';
+
+            for (x = 0; x < opts.length; x++) {
+                if (opts[x][0] == '/' + filename) {
+                    stringOpts += '<option value="' + opts[x][0] + '" selected>' + opts[x][1] + '</option>';
+                } else {
+                    stringOpts += '<option value="' + opts[x][0] + '">' + opts[x][1] + '</option>';
+                }
+            }
+
+            var endSel = '</select>';
+
+            document.write(startSel + stringOpts + endSel);
+        </script>
 
         <div id="clrWrap-0" class="clrChooser">
             <label for="clr0">white</label>
