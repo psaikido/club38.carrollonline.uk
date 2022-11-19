@@ -23,8 +23,8 @@ function blues() {
     changeClr($('#R7'), 'light-grey');
     changeClr($('#L8'), 'dark-blue');
     changeClr($('#R8'), 'dark-blue');
-    changeClr($('#L10'), 'bright-blue');
-    changeClr($('#R10'), 'bright-blue');
+    changeClr($('#L9'), 'bright-blue');
+    changeClr($('#R9'), 'bright-blue');
 }
 
 function hot() {
@@ -44,8 +44,8 @@ function hot() {
     changeClr($('#R7'), 'flo-yellow');
     changeClr($('#L8'), 'orange');
     changeClr($('#R8'), 'orange');
-    changeClr($('#L10'), 'white');
-    changeClr($('#R10'), 'white');
+    changeClr($('#L9'), 'white');
+    changeClr($('#R9'), 'white');
 }
 
 function purplelimeblack() {
@@ -65,6 +65,6 @@ function purplelimeblack() {
     changeClr($('#R7'), 'flo-yellow');
     changeClr($('#L8'), 'dark-grey');
     changeClr($('#R8'), 'dark-grey');
-    changeClr($('#L10'), 'purple');
-    changeClr($('#R10'), 'purple');
+    changeClr($('#L9'), 'purple');
+    changeClr($('#R9'), 'purple');
 }
