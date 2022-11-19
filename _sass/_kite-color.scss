@@ -62,7 +62,8 @@ svg path {
 
     .chosen-values {
         margin: 0 auto;
-        margin-top: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
 
         table td.head {
             font-weight: bold;
@@ -279,7 +280,7 @@ svg path {
 }
 
 #displayCanvas {
-    width: 989px;
+    width: 967px;
     height: auto;
     position: fixed;
     top: 44px;
