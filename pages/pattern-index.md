@@ -63,5 +63,8 @@ permalink: /pattern-index.html
             <a href="/kite-color-xx-tarantula.html">XX Tarantula</a><br />
             <a href="/kite-color-xx-super-tarantula.html">XX Super Tarantula</a><br />
         </td>
+        <td class="col3">
+            <a href="/kite-color-nym.html">NYM</a><br />
+        </td>
     </tr>
 </table>
