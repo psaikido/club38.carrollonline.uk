@@ -97,6 +97,9 @@ $( document ).ready(function() {
             $(this).removeClass();
             $(this).addClass('panel');
         });
+        $("[id^=display]").each(function(i) {
+            $(this).text('');
+        });
     });
 
     /* Central logo panel can be white on black or reversed */
