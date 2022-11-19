@@ -46,6 +46,9 @@ permalink: /pattern-index.html
             -->
         </td>
     </tr>
+</table>
+
+<table class="individualPatternLinks">
     <tr>
         <th colspan="3"><h6>Colorizers</h6></th>
     </tr>
@@ -57,7 +60,8 @@ permalink: /pattern-index.html
         </td>
         <td class="col2">
             <a href="/kite-color-xx.html">XX</a><br />
-            <a href="/kite-color-tarantula.html">XX Tarantula</a><br />
+            <a href="/kite-color-xx-tarantula.html">XX Tarantula</a><br />
+            <a href="/kite-color-xx-super-tarantula.html">XX Super Tarantula</a><br />
         </td>
     </tr>
 </table>
