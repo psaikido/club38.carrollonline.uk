@@ -84,6 +84,7 @@ $( document ).ready(function() {
     // Toggle between editing and screenshot modes
     // Called from both modes by different buttons
     function screenshotToggle() {
+        $('.header-text').toggle();
         $('.kite-colorizer .kite p').toggle();
         $('.toolbox').toggle();
         $('#show-toolbox').toggle();
