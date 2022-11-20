@@ -29,10 +29,15 @@ $( document ).ready(function() {
 
         /* Discover the currently selected colour */
         let clr = $('input[name="clrs"]:checked').val();
-        let mirror = $('#mirror:checked').val();
+
+        /* What copy mode are we in? */
+        let copyMode = $('input[name="copy-mode"]:checked').val();
         
-        /* Get the id and color and mirror to the other wing */
-        if (mirror == 'on') {
+        if (copyMode == 'single') {
+            /* Default mode - fill chosen panel with selected color */
+            changeClr(this, clr);
+        } else if (copyMode == 'mirror') {
+            /* Get the id and color and mirror to the other wing */
             clickedWing = this.id.substr(0, 1);
             panel = this.id.substr(1);
 
@@ -44,11 +49,17 @@ $( document ).ready(function() {
                 otherWing = '';
             }
 
+            changeClr(this, clr);
             mirrorElem = $('.panel#' + otherWing + panel);
             changeClr(mirrorElem[0], clr);
-        }
+        } else if (copyMode == 'whole-wing') {
+            /* Fill in the whole wing with the selected color */
+            clickedWing = this.id.substr(0, 1);
 
-        changeClr(this, clr);
+            $("[id^=" + clickedWing + "]").each(function(i) {
+                changeClr(this, clr);
+            });
+        }
     });
 
     /* Bind a click event to each color's radio 

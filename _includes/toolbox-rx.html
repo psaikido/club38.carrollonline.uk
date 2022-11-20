@@ -2,15 +2,18 @@
     {% include clr-pickers.html %}
 
     <div class="buttons">
+        <input type="radio" name="copy-mode" value="single" checked>single</input><br />
+        <input type="radio" name="copy-mode" value="mirror">mirror</input><br />
+        <input type="radio" name="copy-mode" value="whole-wing">whole wing</input><br />
+
+        <hr />
+
         <input type="checkbox" id="labels" checked>
         <label for="labels">show labels</label><br />
 
         <input type="checkbox" id="reverse-center">
         <label for="reverse-center">reverse logo</label><br />
-
-        <input type="checkbox" id="mirror">
-        <label for="mirror">mirror</label><br />
-
+        <br />
 
         <select id="presets">
             <option value="">presets</option>
