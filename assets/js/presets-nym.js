@@ -16,7 +16,7 @@ function blues() {
     changeClr($('#R3'), 'dark-blue');
     changeClr($('#L4'), 'bright-blue');
     changeClr($('#R4'), 'bright-blue');
-    changeClr($('#C'), 'bright-blue');
+    changeClr($('#center-panel'), 'bright-blue');
 }
 
 function hot() {
@@ -28,7 +28,7 @@ function hot() {
     changeClr($('#R3'), 'orange');
     changeClr($('#L4'), 'yellow');
     changeClr($('#R4'), 'yellow');
-    changeClr($('#C'), 'yellow');
+    changeClr($('#center-panel'), 'yellow');
 }
 
 function lime_purple() {
@@ -40,7 +40,7 @@ function lime_purple() {
     changeClr($('#R3'), 'purple');
     changeClr($('#L4'), 'flo-yellow');
     changeClr($('#R4'), 'flo-yellow');
-    changeClr($('#C'), 'flo-yellow');
+    changeClr($('#center-panel'), 'flo-yellow');
 }
 
 function red_black() {
@@ -52,5 +52,5 @@ function red_black() {
     changeClr($('#R3'), 'red');
     changeClr($('#L4'), 'white');
     changeClr($('#R4'), 'white');
-    changeClr($('#C'), 'red');
+    changeClr($('#center-panel'), 'red');
 }

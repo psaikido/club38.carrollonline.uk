@@ -21,7 +21,7 @@ function changeClr(elem, clr) {
 
 $( document ).ready(function() {
     /* Bind a click event to each panel in the kite's svg */
-    $('.revolution-reflex .panel').on("click", function () {
+    $('.revolution .panel').on("click", function () {
         let clickedWing = '';
         let otherWing = '';
         let panel = 0;
@@ -73,7 +73,7 @@ $( document ).ready(function() {
 
     /* Show/hide the labels on the panels. */
     $('.toolbox #labels').click(function() {
-        $('svg.revolution-reflex text').toggle();
+        $('svg.revolution text').toggle();
     });
 
     /* Used to get back to the full editing mode */
@@ -104,7 +104,7 @@ $( document ).ready(function() {
 
     /* Take all color choices off */
     $('button#reset').click(function() {
-        $('.revolution-reflex').children('.panel').each(function(i) {
+        $('.revolution').children('.panel').each(function(i) {
             $(this).removeClass();
             $(this).addClass('panel');
         });
@@ -115,8 +115,8 @@ $( document ).ready(function() {
 
     /* Central logo panel can be white on black or reversed */
     $('.toolbox #reverse-center').click(function() {
-        let centerPanel = $('svg.revolution-reflex #center-panel');
-        let logo = $('svg.revolution-reflex .logo');
+        let centerPanel = $('svg.revolution #center-panel');
+        let logo = $('svg.revolution .logo');
 
         if (centerPanel.attr("class") == 'center') {
             centerPanel.removeClass();
@@ -125,6 +125,9 @@ $( document ).ready(function() {
                 $(this).removeClass();
                 $(this).addClass('logo reverse');
             });
+
+            /* Display the choice. */
+            $("#display-center-panel").text("light on dark");
         } else {
             centerPanel.removeClass();
             centerPanel.addClass('center');
@@ -132,6 +135,9 @@ $( document ).ready(function() {
                 $(this).removeClass();
                 $(this).addClass('logo');
             });
+
+            /* Display the choice. */
+            $("#display-center-panel").text("dark on light");
         }
     });
 });

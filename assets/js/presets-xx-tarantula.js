@@ -4,6 +4,8 @@ $('#presets').change(function() {
     if (scheme == 'blues') blues();
     if (scheme == 'hot') hot();
     if (scheme == 'purplelimeblack') purplelimeblack();
+
+    $("#display-center-panel").text("dark on light");
 });
 
 function blues() {

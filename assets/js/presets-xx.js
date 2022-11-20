@@ -7,6 +7,8 @@ $('#presets').change(function() {
     if (scheme == 'hot') hot();
     if (scheme == 'purplelimeblack') purplelimeblack();
     if (scheme == 'redwhiteblue') redwhiteblue();
+
+    $("#display-center-panel").text("dark on light");
 });
 
 function blackred() {

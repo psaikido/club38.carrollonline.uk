@@ -71,20 +71,33 @@ svg path {
         }
 
         display: grid;
-        grid-template-areas: ". left right .";
-        grid-template-columns: 257px 1fr 1fr auto;
+        grid-template-areas: 
+            ".  centre centre ."
+            ". left right .";
+        grid-template-columns: auto repeat(2, 250px) auto;
+        gap: 15px;
+
+        .span-whole {
+            grid-area: centre;
+            text-align: center;
+            padding: 8px;
+        }
 
         .col-left {
             grid-area: left;
+            border: 1px solid #aaa;
+            padding: 8px;
         }
 
         .col-right {
             grid-area: right;
+            border: 1px solid #aaa;
+            padding: 8px;
         }
     }
 }
 
-.revolution-reflex {
+.revolution {
     margin: 15px auto;
 
     .panel {
@@ -155,7 +168,10 @@ svg path {
         fill: #000000;
         font-size: 100px;
     }
+}
 
+// Only applies to the reflex models not the NYM
+.revolution.reflex {
     #center-panel {
         fill: #ffffff;
         font-size: 100px;
@@ -182,6 +198,7 @@ svg path {
     background-color: var(--current-color);
 
     .buttons {
+        color: #eee;
         background-color: var(--dark-grey);
         padding: 5px;
 

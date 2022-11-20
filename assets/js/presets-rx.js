@@ -14,6 +14,8 @@ function blackCenter() {
         $(this).removeClass();
         $(this).addClass('logo reverse');
     });
+
+    $("#display-center-panel").text("light on dark");
 }
 
 function whiteCenter() {
@@ -22,6 +24,8 @@ function whiteCenter() {
         $(this).removeClass();
         $(this).addClass('logo');
     });
+
+    $("#display-center-panel").text("dark on light");
 }
 
 function red_grey_black_bcenter() {
