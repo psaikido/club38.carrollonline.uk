@@ -19,6 +19,26 @@ function changeClr(elem, clr) {
     $(disp).text(clr);
 }
 
+function blackCenter() {
+    $('#center-panel').addClass('reverse');
+    $('.logo').children().each(function() {
+        $(this).removeClass();
+        $(this).addClass('logo reverse');
+    });
+
+    $("#display-center-panel").text("light on dark");
+}
+
+function whiteCenter() {
+    $('#center-panel').removeClass('reverse');
+    $('.logo').children().each(function() {
+        $(this).removeClass();
+        $(this).addClass('logo');
+    });
+
+    $("#display-center-panel").text("dark on light");
+}
+
 $( document ).ready(function() {
     /* Bind a click event to each panel in the kite's svg */
     $('.revolution .panel').on("click", function () {
@@ -138,6 +158,78 @@ $( document ).ready(function() {
 
             /* Display the choice. */
             $("#display-center-panel").text("dark on light");
+        }
+    });
+
+    /* Use browser's local storage to save a design */
+    $('#save').click(function() {
+        if (typeof(Storage) !== "undefined") {
+            let obj = {};
+
+            // Collect all the relevant info */
+            let model = $('#modelChanger').val();
+            obj['model'] = model;
+
+            /* Get the chosen info from the 'chosen-values' table */
+            $("[id^=display]").each(function(i) {
+                /* Only save the panel info - the ids start with 'display-' */
+                if (this.id.substr(0, 8) == 'display-') {
+                    /* Take off the prefix */
+                    let id = this.id.substr(8);
+                    obj[id] = this.innerHTML;
+                }
+            });
+            // console.log(obj);
+
+            localStorage.setItem("kiteDesign", JSON.stringify(obj));
+            alert("This design is now saved for later.\nRetrieve it by clicking 'load design'");
+        } else {
+            alert("Sorry, this browser can't do that!");
+        }
+    });
+
+    /* Retrieve saved data and load the data */ 
+    $('#load').click(function() {
+        if (typeof(Storage) !== "undefined") {
+            retrievedData = localStorage.getItem("kiteDesign");
+            if (!retrievedData) {
+                alert("Sorry, no data saved for this model!");
+                return;
+            }
+            let data = JSON.parse(retrievedData);
+
+            /* Check we are on the right page to display this model */
+            let url = window.location.href;
+            let filename = url.split('/').pop();
+            
+            if (data['model'] != '/' + filename) {
+                alert("The saved design is for the model " + data['model'] + "\nYou'll need to go to that page to load it.");
+                return;
+            }
+
+            for (const key in data) {
+                let k = `${key}`;
+                let v = `${data[key]}`;
+                
+                /* Find the prefix and use only 'L'eft and 'R'ight keys */
+                let prefix = k.substr(0, 1);
+                if (prefix == 'L' || prefix == 'R') {
+                    changeClr($('#' + k), v);
+                }
+
+                /* Load the central panel if it is set */
+                if (k == 'center-panel') {
+
+                    if (v == 'dark on light') {
+                        whiteCenter();
+                    } else if (v == 'light on dark') {
+                        blackCenter();
+                    }
+                    // console.log(k, v);
+                }
+            }
+        } else {
+            alert("Sorry, this browser can't do that!");
         }
     });
 });

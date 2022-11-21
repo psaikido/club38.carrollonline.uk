@@ -8,16 +8,6 @@ $('#presets').change(function() {
     if (scheme == 'purple_black_grey_white') purple_black_grey_white();
 });
 
-function blackCenter() {
-    $('svg.revolution-reflex #center-panel').addClass('reverse');
-    $('svg.revolution-reflex .logo').children().each(function() {
-        $(this).removeClass();
-        $(this).addClass('logo reverse');
-    });
-
-    $("#display-center-panel").text("light on dark");
-}
-
 function red_black_grey() {
     changeClr($('#L1'), 'black');
     changeClr($('#R1'), 'black');

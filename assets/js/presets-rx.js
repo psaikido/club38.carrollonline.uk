@@ -8,26 +8,6 @@ $('#presets').change(function() {
     if (scheme == 'blue_grey_black_wcenter') blue_grey_black_wcenter();
 });
 
-function blackCenter() {
-    $('svg.revolution-reflex #center-panel').addClass('reverse');
-    $('svg.revolution-reflex .logo').children().each(function() {
-        $(this).removeClass();
-        $(this).addClass('logo reverse');
-    });
-
-    $("#display-center-panel").text("light on dark");
-}
-
-function whiteCenter() {
-    $('svg.revolution-reflex #center-panel').removeClass('reverse');
-    $('svg.revolution-reflex .logo').children().each(function() {
-        $(this).removeClass();
-        $(this).addClass('logo');
-    });
-
-    $("#display-center-panel").text("dark on light");
-}
-
 function red_grey_black_bcenter() {
     changeClr($('#L1'), 'black');
     changeClr($('#R1'), 'black');

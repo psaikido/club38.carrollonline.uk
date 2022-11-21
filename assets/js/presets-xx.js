@@ -9,6 +9,8 @@ $('#presets').change(function() {
     if (scheme == 'redwhiteblue') redwhiteblue();
 
     $("#display-center-panel").text("dark on light");
+
+    whiteCenter();
 });
 
 function blackred() {
