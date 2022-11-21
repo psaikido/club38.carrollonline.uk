@@ -173,7 +173,7 @@ svg path {
 // Only applies to the reflex models not the NYM
 .revolution.reflex {
     #center-panel {
-        fill: #ffffff;
+        fill: var(--white);
         font-size: 100px;
 
         &.reverse {
@@ -251,17 +251,17 @@ svg path {
 
     #clrWrap-5 {
         background-color: var(--bright-blue);
-        color: #fff;
+        color: var(--white);
     }
 
     #clrWrap-6 {
         background-color: var(--dark-blue);
-        color: #fff;
+        color: var(--white);
     }
 
     #clrWrap-7 {
         background-color: var(--purple);
-        color: #fff;
+        color: var(--white);
     }
 
     #clrWrap-8 {
@@ -270,12 +270,12 @@ svg path {
 
     #clrWrap-9 {
         background-color: var(--dark-grey);
-        color: #fff;
+        color: var(--white);
     }
 
     #clrWrap-10 {
         background-color: var(--black);
-        color: #fff;
+        color: var(--white);
     }
 
     #clrWrap-11 {

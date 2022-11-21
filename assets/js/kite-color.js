@@ -225,7 +225,6 @@ $( document ).ready(function() {
                     } else if (v == 'light on dark') {
                         blackCenter();
                     }
-                    // console.log(k, v);
                 }
             }
         } else {
