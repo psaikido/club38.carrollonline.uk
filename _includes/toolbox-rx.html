@@ -15,14 +15,8 @@
         <label for="reverse-center">reverse logo</label><br />
         <br />
 
-        <select id="presets">
-            <option value="">presets</option>
-            <option value="red_grey_black_bcenter">Red/Grey/Black/Black Center</option>
-            <option value="brightblue_grey_black_bcenter">Bright Blue/Grey/Black/Black Center</option>
-            <option value="purple_grey_black_wcenter">Purple/Grey/Black/White Center</option>
-            <option value="lime_grey_black_bcenter">Lime/Grey/Black/Black Center</option>
-            <option value="blue_grey_black_wcenter">Blue/Grey/Black/White Center</option>
-        </select> <br /><br />
+        {% include {{ page.preset-options }} %}
+        <br /><br />
 
         <button id="reset">reset</button> <br />
         <button id="html2canvas">take screenshot</button>
