@@ -1,0 +1,18 @@
+default:
+    extensions:
+        Behat\MinkExtension:
+            base_url: http://localhost:4000/pattern-index.html
+            sessions:
+                default:
+                    selenium2:
+                        browser: chrome
+                        wd_host: http://127.0.0.1:4444/wd/hub
+                        capabilities:
+                            chrome:
+                                switches:
+                                    - "--headless"
+                                    - "--disable-gpu"
+                                    - "--window-size=1920,1080"
+                                    - "--no-sandbox"
+    gherkin:
+        cache: ~

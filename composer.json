@@ -1,0 +1,23 @@
+{
+    "require-dev": {
+		"behat/behat" : ">v3.3.1",
+		"behat/mink" : ">v1.9.1",
+		"behat/mink-extension" : ">v2.2",
+		"behat/mink-goutte-driver" : ">1.1",
+		"behat/mink-selenium2-driver" : "dev-master",
+		"behat/mink-browserkit-driver" : ">1.2"
+    },
+    "config": {
+        "bin-dir": "bin/"
+    },
+	"authors" : [{
+			"name" : "Hugh Carroll",
+			"email" : "hughie@carrollonline.co.uk",
+			"homepage" : "https://hugle.uk",
+			"role" : "web developer"
+		}
+	],
+	"support" : {
+		"email" : "hughie@carrollonline.co.uk"
+	}
+}
