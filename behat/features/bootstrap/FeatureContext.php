@@ -111,4 +111,17 @@ class FeatureContext extends MinkContext
         $xpath = $radioButton->getXpath();
         $this->getSession()->getDriver()->click($xpath);
     }
+
+    /**
+     * @Given I select :sel option :opt
+     */
+    public function iSelectOption($sel, $opt)
+    {
+        $dropdown = $this->page->findField($sel);
+        if (null === $dropdown) {
+            throw new Exception("Select $dropdown has not been found");
+        }
+
+        $dropdown->selectOption($opt);
+    }
 }
