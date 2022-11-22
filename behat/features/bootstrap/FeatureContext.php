@@ -51,7 +51,7 @@ class FeatureContext extends MinkContext
     }
 
     /**
-     * @When I choose color :clr
+     * @Given I choose color :clr
      */
     public function iChooseColor($clr)
     {
@@ -95,5 +95,20 @@ class FeatureContext extends MinkContext
         if (!$elem->hasClass($clr)) {
             throw new Exception("Panel $panel does not have the color $clr");
         }
+    }
+
+    /**
+     * @When I select the radio :radioName button :radioValue
+     */
+    public function iSelectTheRadioButton($radioName, $radioValue)
+    {
+        $fieldId = $radioName . '-' . $radioValue;
+        $radioButton = $this->page->findField($fieldId);
+        if (null === $radioButton) {
+            throw new Exception("Field id $fieldId not found");
+        }
+
+        $xpath = $radioButton->getXpath();
+        $this->getSession()->getDriver()->click($xpath);
     }
 }
