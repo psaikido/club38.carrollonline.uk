@@ -139,4 +139,42 @@ class FeatureContext extends MinkContext
 
         $dropdown->selectOption($opt);
     }
+
+    /**
+     * @Then the id :id should be :vis
+     */
+    public function theIdShouldBe($id, $vis)
+    {
+        $elem = $this->page->findById($id);
+        if (null === $elem) {
+            throw new Exception("The element $elem has not been found");
+        }
+
+        if ($vis === "visible") {
+            if (!$elem->isVisible()) {
+                throw new Exception("The element $elem is not visible");
+            }
+        }
+
+        if ($vis === "invisible") {
+            if ($elem->isVisible()) {
+                throw new Exception("The element $elem is visible");
+            }
+        }
+    }
+
+    /**
+     * @Given the display :displayId should be :color
+     */
+    public function theDisplayShouldBe($displayId, $color)
+    {
+        $elem = $this->page->findById($displayId);
+        if (null === $elem) {
+            throw new Exception("The element $elem has not been found");
+        }
+
+        if ($elem->getText() !== $color) {
+            throw new Exception("The element $displayId does not have the color $color");
+        }
+    }
 }
