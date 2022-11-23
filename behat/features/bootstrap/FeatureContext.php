@@ -98,6 +98,21 @@ class FeatureContext extends MinkContext
     }
 
     /**
+     * @Then panel :panel does not have color :clr
+     */
+    public function panelDoesNotHaveColor($panel, $clr)
+    {
+        $elem = $this->page->findById($panel);
+        if (null === $elem) {
+            throw new Exception("No html element found for the selector ('$elem')");
+        }
+
+        if ($elem->hasClass($clr)) {
+            throw new Exception("Panel $panel has the color $clr");
+        }
+    }
+
+    /**
      * @When I select the radio :radioName button :radioValue
      */
     public function iSelectTheRadioButton($radioName, $radioValue)

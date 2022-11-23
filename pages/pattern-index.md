@@ -67,7 +67,7 @@ permalink: /pattern-index.html
             <a href="/kite-color-nym.html">NYM</a><br />
             <a href="/kite-color-nym-vent1.html">NYM 1 Vent</a><br />
             <a href="/kite-color-nym-vent2.html">NYM 2 Vent</a><br />
-            <a href="/kite-color-nym-vent2.html">NYM 3 Vent</a><br />
+            <a href="/kite-color-nym-vent3.html">NYM 3 Vent</a><br />
         </td>
     </tr>
 </table>
