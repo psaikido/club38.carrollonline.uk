@@ -241,3 +241,60 @@ Feature: RX
         Then the id "displayCanvas" should be "invisible"
         When I press "take screenshot"
         Then the id "displayCanvas" should be "visible"
+
+
+    Scenario: Check the 'load design' button does not have a design to load
+        Given I am on "/"
+        And I follow "RX"
+        And I press "load design"
+        Then the popup should say "Sorry, no data saved for this model!"
+        And I confirm popup
+
+
+    Scenario: Check the 'save design' button does not have a design to load
+        Given I am on "/"
+        And I follow "RX"
+        And I select "presets" option "blue_grey_black_wcenter"
+        And I choose color "purple"
+        And I click panel "R11"
+        And I press "save design"
+        Then the popup should say:
+        """
+        This design is now saved for later.
+        Retrieve it by clicking 'load design'
+        """
+        And I confirm popup
+
+    Scenario: Check the 'save design' button works
+        Given I am on "/"
+        And I follow "RX"
+        And I select "presets" option "red_grey_black_bcenter"
+        And I choose color "purple"
+        And I click panel "L11"
+        And I press "save design"
+        And I confirm popup
+        And I select "presets" option "brightblue_grey_black_bcenter"
+        And I press "load design"
+        Then panel "L1" has color "black"
+        Then panel "R1" has color "black"
+        Then panel "L2" has color "dark-grey"
+        Then panel "R2" has color "dark-grey"
+        Then panel "L3" has color "red"
+        Then panel "R3" has color "red"
+        Then panel "L4" has color "black"
+        Then panel "R4" has color "black"
+        Then panel "L5" has color "red"
+        Then panel "R5" has color "red"
+        Then panel "L6" has color "light-grey"
+        Then panel "R6" has color "light-grey"
+        Then panel "L7" has color "black"
+        Then panel "R7" has color "black"
+        Then panel "L8" has color "dark-grey"
+        Then panel "R8" has color "dark-grey"
+        Then panel "L9" has color "dark-grey"
+        Then panel "R9" has color "dark-grey"
+        Then panel "L10" has color "black"
+        Then panel "R10" has color "black"
+        Then panel "L11" has color "purple"
+        Then panel "R11" has color "red"
+        Then panel "center-panel" has color "reverse"

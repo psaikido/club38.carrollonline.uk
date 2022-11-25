@@ -179,9 +179,9 @@ $( document ).ready(function() {
                     obj[id] = this.innerHTML;
                 }
             });
-            // console.log(obj);
 
-            localStorage.setItem("kiteDesign", JSON.stringify(obj));
+            let storageName = 'kite-design-' + model.substr(1);
+            localStorage.setItem(storageName, JSON.stringify(obj));
             alert("This design is now saved for later.\nRetrieve it by clicking 'load design'");
         } else {
             alert("Sorry, this browser can't do that!");
@@ -191,7 +191,9 @@ $( document ).ready(function() {
     /* Retrieve saved data and load the data */ 
     $('#load').click(function() {
         if (typeof(Storage) !== "undefined") {
-            retrievedData = localStorage.getItem("kiteDesign");
+            let model = $('#modelChanger').val();
+            let storageName = 'kite-design-' + model.substr(1);
+            retrievedData = localStorage.getItem(storageName);
             if (!retrievedData) {
                 alert("Sorry, no data saved for this model!");
                 return;

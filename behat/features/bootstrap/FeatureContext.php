@@ -1,5 +1,6 @@
 <?php
 
+use Behat\Behat\Context\Context;
 use Behat\Behat\Context\ClosuredContextInterface,
     Behat\Behat\Context\TranslatedContextInterface,
     Behat\Behat\Context\BehatContext,
@@ -12,7 +13,7 @@ use Behat\MinkExtension\Context\MinkContext;
 /**
  * Defines application features from the specific context.
  */
-class FeatureContext extends MinkContext
+class FeatureContext extends MinkContext implements Context
 {
     private $page;
 
@@ -175,6 +176,48 @@ class FeatureContext extends MinkContext
 
         if ($elem->getText() !== $color) {
             throw new Exception("The element $displayId does not have the color $color");
+        }
+    }
+
+    /**
+     * @Given I confirm popup
+     */
+    public function iConfirmPopup()
+    {
+        $this->getSession()
+            ->getDriver()
+            ->getWebDriverSession()
+            ->accept_alert();
+        sleep(1);
+    }
+
+    /**
+     * @Then the popup should say :text
+     */
+    public function thePopupShouldSay($text)
+    {
+        $popupText = $this->getSession()
+                ->getDriver()
+                ->getWebDriverSession()
+                ->getAlert_text();
+        
+        if ($popupText !== $text) {
+            throw new Exception("The text '$text' doesn't match with the actual: '$popupText'");
+        }
+    }
+
+    /**
+     * @Then the popup should say:
+     */
+    public function thePopupShouldSay2(PyStringNode $text)
+    {
+        $popupText = $this->getSession()
+                ->getDriver()
+                ->getWebDriverSession()
+                ->getAlert_text();
+        
+        if ($popupText != $text) {
+            throw new Exception("The text \n\"$text\" doesn't match with the actual: \n\"$popupText\"");
         }
     }
 }
