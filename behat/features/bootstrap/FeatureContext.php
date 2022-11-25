@@ -220,4 +220,12 @@ class FeatureContext extends MinkContext implements Context
             throw new Exception("The text \n\"$text\" doesn't match with the actual: \n\"$popupText\"");
         }
     }
+
+    /**
+     * @Given I wait for :seconds seconds
+     */
+    public function iWaitForSeconds($seconds)
+    {
+        sleep($seconds);
+    }
 }
