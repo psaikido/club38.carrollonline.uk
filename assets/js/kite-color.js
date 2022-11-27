@@ -163,9 +163,11 @@ $( document ).ready(function() {
 
     /* Use browser's local storage to save a design */
     $('#save').click(function() {
+
         if (typeof(Storage) !== "undefined") {
             let obj = {};
-
+            let designStarted = false;
+            
             // Collect all the relevant info */
             let model = $('#modelChanger').val();
             obj['model'] = model;
@@ -177,8 +179,18 @@ $( document ).ready(function() {
                     /* Take off the prefix */
                     let id = this.id.substr(8);
                     obj[id] = this.innerHTML;
+
+                    if (this.innerHTML !== "") {
+                        designStarted = true;
+                    }
                 }
             });
+            
+            // Don't proceed if no design has been started
+            if (designStarted == false) {
+                alert("No design to save!");
+                return;
+            }
 
             let storageName = 'kite-design-' + model.substr(1);
             localStorage.setItem(storageName, JSON.stringify(obj));

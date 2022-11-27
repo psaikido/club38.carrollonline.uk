@@ -251,6 +251,17 @@ Feature: RX
         And I confirm popup
 
 
+    Scenario: Check the 'save design' doesn't save an empty design
+        Given I am on "/"
+        And I follow "RX"
+        And I press "save design"
+        Then the popup should say:
+        """
+        No design to save!
+        """
+        And I confirm popup
+
+
     Scenario: Check the 'save design' button saves
         Given I am on "/"
         And I follow "RX"
