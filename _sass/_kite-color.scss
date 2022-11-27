@@ -302,8 +302,12 @@ svg {
     display: none;
 }
 
+#show-toolbox {
+    height: 30px;
+}
+
 #displayCanvas {
-    width: 967px;
+    width: auto;
     height: auto;
     position: fixed;
     top: 44px;

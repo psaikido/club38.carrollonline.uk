@@ -105,10 +105,18 @@ $( document ).ready(function() {
     $('button#html2canvas').click(function() {
         screenshotToggle();
         let shotarea = document.querySelector(".kite-colorizer");
-        $(".kite-colorizer .chosen-values").css({"background-color": "#343a40", "color": "#cdc8c8"});
+        $(".kite-colorizer .chosen-values")
+            .css({"background-color": "#343a40", "color": "#cdc8c8"});
 
         html2canvas(shotarea).then(canvas => {
-            document.getElementById('displayCanvas').appendChild(canvas);
+            let dc = document.getElementById('displayCanvas');
+
+            /* Don't add a new canvas without removing a previous one */
+            if (dc.childElementCount > 0) {
+                dc.removeChild(dc.lastElementChild)
+            }
+
+            dc.appendChild(canvas);
         });
     });
 
