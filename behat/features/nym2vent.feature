@@ -7,7 +7,6 @@ Feature: NYM 2 Vent
         Given I am on "/"
         And I follow "NYM 2 Vent"
         And I choose color "red"
-        When I uncheck "show labels"
         And I click panel "L1"
         Then panel "L1" has color "red"
 
@@ -17,7 +16,6 @@ Feature: NYM 2 Vent
         And I follow "NYM 2 Vent"
         And I select the radio "copy-mode" button "mirror" 
         And I choose color "purple"
-        When I uncheck "show labels"
         And I click panel "L2"
         Then panel "R2" has color "purple"
 
@@ -27,7 +25,6 @@ Feature: NYM 2 Vent
         And I follow "NYM 2 Vent"
         And I select the radio "copy-mode" button "whole-wing" 
         And I choose color "purple"
-        When I uncheck "show labels"
         And I click panel "L1"
         Then panel "L2" has color "purple"
         Then panel "L3" has color "purple"
@@ -119,7 +116,6 @@ Feature: NYM 2 Vent
         Given I am on "/"
         And I follow "NYM 2 Vent"
         And I choose color "orange"
-        When I uncheck "show labels"
         And I click panel "L1"
         Then panel "L1" has color "orange"
         When I press "reset"

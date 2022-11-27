@@ -16,8 +16,14 @@
     --current-color: var(--orange);
 }
 
-svg path {
-    fill: black;
+svg {
+    path {
+        fill: black;
+    }
+
+    tspan {
+        pointer-events: none;
+    }
 }
 
 .header {
