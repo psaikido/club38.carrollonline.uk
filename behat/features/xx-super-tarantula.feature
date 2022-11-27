@@ -206,7 +206,7 @@ Feature: XX Super Tarantula
         And I confirm popup
 
 
-    Scenario: Check the 'save design' button does not have a design to load
+    Scenario: Check the 'save design' button saves
         Given I am on "/"
         And I follow "XX Super Tarantula"
         And I select "presets" option "hot"
