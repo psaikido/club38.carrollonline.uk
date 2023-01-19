@@ -110,7 +110,8 @@ ul {
     list-style-type: square;
 }
 
-.footer {
+.footer, 
+.footer-clrzr {
     font-style: italic;
     font-size: 12px;
     position: fixed;
@@ -127,6 +128,13 @@ ul {
     a {
         color: var(--dark-major);
     }
+}
+
+.footer-clrzr {
+    width: auto;
+    position: inherit;
+    background: none;
+    font-size: 9px;
 }
 
 #wind-window, 
