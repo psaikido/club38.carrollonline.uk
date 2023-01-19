@@ -207,9 +207,14 @@ svg {
         color: var(--text-major);
         background-color: var(--bkg-main);
         padding: 5px;
+        border: 1px solid var(--text-major);
 
         select#presets {
             width: 100%;
+        }
+
+        button {
+            border: 1px solid var(--text-major);
         }
     }
 
