@@ -1,9 +1,7 @@
 $dark-grey: #343a40;
-$blue: #157dff;
 $pink: #d33682;
 $black: #333333;
 
-$bkg: $dark-grey;
 $hilight: #c98f2a;
 $text-light: #cdc8c8;
 $text-mute: #7d7878;
@@ -11,11 +9,17 @@ $text-link: #ada8a8;
 $border-light: #586e75;
 $border-dark: $pink;
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: $hilight;
+:root {
+    --dark-major: #343a40;
+    --light-major: #ffffff;
+    --text-major: #c98f2a;
+}
+
+html {
+    --bkg-main: var(--dark-major);
+
+    &.light {
+        --bkg-main: var(--light-major);
+        --text-major: var(--dark-major);
+    }
 }
