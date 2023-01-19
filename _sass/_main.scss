@@ -1,7 +1,7 @@
 body {
     font-family: 'Paprika', cursive;
     font-size: 1.1em;
-    color: $text-light;
+    color: var(--text-minor);
     letter-spacing: .1em;
     margin: 0;
     padding: 0;
@@ -18,7 +18,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: $hilight;
+    color: var(--text-major);
 }
 
 .wrap {
@@ -28,14 +28,14 @@ h6 {
 
     img {
         max-width: 100%;
-        border: 1px solid $border-light;
+        border: 1px solid var(--border);
     }
 }
 
 .header {
     width: 100%;
     height: 56px;
-    border-bottom: 1px solid $border-light;
+    border-bottom: 1px solid var(--border);
     background-color: var(--bkg-main);
 
     .header-text {
@@ -67,7 +67,7 @@ h6 {
     }
 
     h4 {
-        border-bottom: 1px solid $border-light;
+        border-bottom: 1px solid var(--border);
     }
 
     .two-cols {
@@ -97,11 +97,12 @@ h6 {
 
 a:link,
 a:visited {
-	color: $text-link;
-    border-bottom: 1px solid $text-mute;
+    color: var(--text-link);
+    border-bottom: 1px solid var(--text-mute);
 }
+
 a:hover {
-    color: $hilight;
+    color: var(--text-major);
     text-decoration: none;
 }
 
@@ -120,11 +121,11 @@ ul {
 
     .footer-text {
         margin-right: 10px;
-        color: $dark-grey;
+        color: var(--dark-major);
     }
 
     a {
-        color: $black;
+        color: var(--dark-major);
     }
 }
 
@@ -138,7 +139,7 @@ ul {
     left: 0;
     right: 0;
     margin: 0 auto;
-    border: 1px solid $border-light;
+    border: 1px solid var(--border);
     background-image: url("/assets/images/kilkennySkyBg.png");
     background-size: 800px 400px;
     background-repeat: no-repeat;
@@ -205,7 +206,7 @@ ul {
 
 .button-bank {
     position: fixed;
-    top: 14px;
+    top: 66px;
     left: 25px;
     width: 78px;
     z-index: 4;
@@ -243,7 +244,7 @@ ul {
     }
 
     .col1, .col2, .col3 {
-        border: 1px solid $border-light;
+        border: 1px solid var(--border);
     }
 }
 

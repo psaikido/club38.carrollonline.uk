@@ -1,22 +1,16 @@
-$dark-grey: #343a40;
-$pink: #d33682;
-$black: #333333;
-
-$hilight: #c98f2a;
-$text-light: #cdc8c8;
-$text-mute: #7d7878;
-$text-link: #ada8a8;
-$border-light: #586e75;
-$border-dark: $pink;
-
 :root {
     --dark-major: #343a40;
     --light-major: #ffffff;
     --text-major: #c98f2a;
+    --text-minor: #cdc8c8;
+    --text-mute: #7d7878;
+    --text-link: #ada8a8;
+    --border-light: #586e75;
 }
 
 html {
     --bkg-main: var(--dark-major);
+    --border: var(--border-light);
 
     &.light {
         --bkg-main: var(--light-major);

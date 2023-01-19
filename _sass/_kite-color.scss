@@ -204,8 +204,8 @@ svg {
     background-color: var(--current-color);
 
     .buttons {
-        color: #eee;
-        background-color: var(--dark-grey);
+        color: var(--text-major);
+        background-color: var(--bkg-main);
         padding: 5px;
 
         select#presets {

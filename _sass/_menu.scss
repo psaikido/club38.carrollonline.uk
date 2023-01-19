@@ -11,27 +11,27 @@
     .navbar-nav {
         flex-direction: row;
         width: auto;
-        color: $hilight;
+        color: var(--text-major);
 
         .btn-primary {
             line-height: 30px;
             text-align: left;
             width: 100%;
-            color: $hilight;
-            border-color: $dark-grey;
-            background-color: $dark-grey;
+            color: var(--text-major);
+            border-color: var(--bkg-main);
+            background-color: var(--bkg-main);
         }
 
         .show > .btn-primary.dropdown-toggle:focus,
         .btn-primary:focus,
         .btn:focus {
             box-shadow: none!important;
-            border-color: $dark-grey;
+            border-color: var(--bkg-main);
             transition: none;
         }
 
         .dropdown-menu {
-            background-color: $dark-grey;
+            background-color: var(--bkg-main);
             margin: none;
             border: none;
             width: auto;
