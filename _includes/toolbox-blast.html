@@ -1,0 +1,29 @@
+<div class="toolbox">
+    {% include clr-pickers.html %}
+
+    <div class="buttons">
+        <input type="radio" name="copy-mode" id="copy-mode-single" value="single" checked>single</input><br />
+        <input type="radio" name="copy-mode" id="copy-mode-mirror" value="mirror">mirror</input><br />
+        <input type="radio" name="copy-mode" id="copy-mode-whole-wing" value="whole-wing">whole wing</input><br />
+
+        <hr />
+
+        <input type="checkbox" id="labels" checked>
+        <label for="labels">show labels</label><br />
+
+        <br />
+
+        {% include {{ page.preset-options }} %}
+        <br /><br />
+
+        <button id="reset">reset</button> <br />
+        <button id="html2canvas">take screenshot</button>
+
+        <hr />
+
+        <button id="save">save design</button><br />
+        <button id="load">load design</button>
+    </div>
+
+    {% include footer-clrzr.html %}
+</div>
