@@ -105,8 +105,10 @@ $( document ).ready(function() {
     $('button#html2canvas').click(function() {
         screenshotToggle();
         let shotarea = document.querySelector(".kite-colorizer");
+        $(".kite-colorizer .kite")
+            .css({"background-image": "none"});
         $(".kite-colorizer .chosen-values")
-            .css({"background-color": "#343a40", "color": "#cdc8c8"});
+            .css({"margin-top": "20px"});
 
         html2canvas(shotarea).then(canvas => {
             let dc = document.getElementById('displayCanvas');
@@ -120,8 +122,8 @@ $( document ).ready(function() {
         });
     });
 
-    // Toggle between editing and screenshot modes
-    // Called from both modes by different buttons
+    /* Toggle between editing and screenshot modes
+       Called from both modes by different buttons */
     function screenshotToggle() {
         $('.header-text').toggle();
         $('.kite-colorizer .kite p').toggle();

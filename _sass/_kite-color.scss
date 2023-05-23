@@ -69,7 +69,7 @@ svg {
     .chosen-values {
         margin: 0 auto;
         padding-top: 15px;
-        padding-bottom: 15px;
+        padding-bottom: 20px;
 
         table td.head {
             font-weight: bold;
@@ -313,13 +313,11 @@ svg {
 }
 
 #displayCanvas {
-    width: auto;
-    height: auto;
     position: fixed;
     top: 44px;
     margin: 0 auto 0 210px;
-    border: 1px solid red;
-    background: black;
+    border: none;
+    background: none;
     color: white;
 }
 
