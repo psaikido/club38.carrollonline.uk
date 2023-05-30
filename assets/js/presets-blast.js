@@ -1,23 +1,27 @@
 /* Preset color schemes */
 $('#presets').change(function() {
-    let scheme = $(this).val();
-    if (scheme == 'electric') electric();
-    if (scheme == 'purple') purple();
-    if (scheme == 'red') red();
+	let scheme = $(this).val();
+	if (scheme == 'electric') electric();
+	if (scheme == 'purple') purple();
+	if (scheme == 'red') red();
 });
 
 function electric() {
-    changeClr($('#L1'), 'black');
-    changeClr($('#R1'), 'black');
-		changeClr($('#L2'), 'flo-yellow');
-    changeClr($('#R2'), 'flo-yellow');
+	changeClr($('#L1'), 'black');
+	changeClr($('#R1'), 'black');
+	changeClr($('#L2'), 'flo-yellow');
+	changeClr($('#R2'), 'flo-yellow');
+	changeClr($('#L3'), 'black');
+	changeClr($('#R3'), 'black');
 }
 
 function purple() {
-    changeClr($('#L1'), 'purple');
-    changeClr($('#R1'), 'purple');
-		changeClr($('#L2'), 'flo-yellow');
-    changeClr($('#R2'), 'flo-yellow');
+	changeClr($('#L1'), 'purple');
+	changeClr($('#R1'), 'purple');
+	changeClr($('#L2'), 'flo-yellow');
+	changeClr($('#R2'), 'flo-yellow');
+	changeClr($('#L3'), 'black');
+	changeClr($('#R3'), 'black');
 }
 
 function red() {
@@ -25,4 +29,6 @@ function red() {
 	changeClr($('#R1'), 'red');
 	changeClr($('#L2'), 'white');
 	changeClr($('#R2'), 'white');
+	changeClr($('#L3'), 'black');
+	changeClr($('#R3'), 'black');
 }
