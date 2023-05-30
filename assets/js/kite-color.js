@@ -99,6 +99,8 @@ $( document ).ready(function() {
     /* Used to get back to the full editing mode */
     $('button#show-toolbox').click(function() {
         screenshotToggle();
+        $(".kite-colorizer .kite")
+            .css({"background-image": "url(/assets/images/bright-blue-sky-with-a-few-tiny-white-clouds.jpg)"});
     });
 
     /* Generate a screenshot with the html2canvas library */
